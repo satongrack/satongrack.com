@@ -923,7 +923,7 @@
           <h3>Send Us an Inquiry</h3>
           <p>Fill in the form below and our engineer will reply with a free design and quotation.</p>
 
-          <form id="inquiryForm" novalidate>
+          <form id="inquiryForm" action="https://formspree.io/f/xwlpoveg" method="POST" novalidate>
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name <span class="req">*</span></label>
@@ -1160,8 +1160,7 @@
         }
 
         /* In production: replace this with your server/backend/Formspree endpoint */
-        success.classList.add('show');
-        form.reset();
+        form.submit(); // 真正提交给 Formspree
 
         setTimeout(function () {
           success.classList.remove('show');
