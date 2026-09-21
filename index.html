@@ -1,361 +1,1168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SATONG | Intelligent Warehouse Racking & Automation Solutions</title>
-    <meta name="description" content="Jiangsu Satong, 20 years warehouse rack manufacturer, provides industrial racks, automated warehouse systems and customized storage solutions.">
-    <meta name="keywords" content="warehouse rack,storage rack,AS/RS,automated warehouse,logistics equipment">
-    <!-- 兜底稳定图标方案，彻底解决解析失败 -->
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SATONG | Warehouse Racking & Automated Storage Solutions Manufacturer</title>
+  <meta name="description" content="SATONG is a 20-year warehouse racking and automated storage system manufacturer. Custom pallet racking, AS/RS, shuttle racking, industrial shelving for global B2B projects.">
+  <meta name="keywords" content="warehouse rack, storage rack, automated warehouse, AS/RS system, industrial racking, customized storage solution">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.satong.com/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Jiangsu Satong Intelligent Logistics Equipment Co., Ltd.",
+    "alternateName": "SATONG",
+    "url": "https://www.satong.com/",
+    "email": "info@satong.com",
+    "telephone": "+86-13395271980",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "No. 4, Fuxing Road, Tushan Town Industrial Park",
+      "addressLocality": "Pizhou City",
+      "addressRegion": "Jiangsu Province",
+      "addressCountry": "CN"
+    },
+    "sameAs": [
+      "https://www.youtube.com/",
+      "https://www.facebook.com/",
+      "https://x.com/",
+      "https://www.tiktok.com/",
+      "https://www.instagram.com/",
+      "https://www.linkedin.com/"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0b3a5b;
+      --primary-dark: #07283f;
+      --accent: #f59e0b;
+      --text: #1f2937;
+      --muted: #64748b;
+      --light: #f8fafc;
+      --border: #e2e8f0;
+      --shadow: 0 12px 32px rgba(11, 58, 91, 0.12);
+      --radius: 14px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.6;
+      padding-top: 76px;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { width: min(1200px, 92%); margin: 0 auto; }
+
+    /* ========== HEADER / NAV ========== */
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 76px;
+      background: var(--primary);
+      z-index: 9999;
+      box-shadow: 0 4px 18px rgba(0,0,0,.15);
+    }
+    .nav-wrap {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .logo {
+      color: #fff;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .logo span { color: var(--accent); }
+    .main-nav > ul {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+    .main-nav li { position: relative; }
+    .main-nav > ul > li > a {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 26px 0;
+      transition: color .25s;
+    }
+    .main-nav > ul > li > a:hover { color: var(--accent); }
+
+    .dropdown, .subdropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 245px;
+      background: #fff;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.18);
+      padding: 10px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: .25s ease;
+      z-index: 1000;
+    }
+    .subdropdown {
+      top: -10px;
+      left: 100%;
+      border-radius: 12px;
+      min-width: 230px;
+    }
+    .main-nav li:hover > .dropdown,
+    .main-nav li:hover > .subdropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .dropdown a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 18px;
+      color: #334155;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: .2s;
+    }
+    .dropdown a:hover {
+      background: #f1f5f9;
+      color: var(--primary);
+      padding-left: 22px;
+    }
+    .dropdown i { font-size: 11px; color: #94a3b8; }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #cbd5e1;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .lang-switch a:hover { color: var(--accent); }
+
+    .nav-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: #fff;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    /* ========== HERO SLIDER ========== */
+    .hero-slider {
+      position: relative;
+      height: 640px;
+      overflow: hidden;
+      background: var(--primary-dark);
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease;
+      display: flex;
+      align-items: center;
+      z-index: 0;
+    }
+    .slide.active { opacity: 1; z-index: 1; }
+    .slide .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(4,20,35,.82), rgba(4,20,35,.42));
+    }
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      max-width: 760px;
+      padding: 0 0 20px;
+    }
+    .slide-content h1 {
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.1;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+    .slide-content p {
+      font-size: 18px;
+      color: #e2e8f0;
+      margin-bottom: 32px;
+      max-width: 680px;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 15px;
+      transition: .25s ease;
+      border: 2px solid transparent;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #111827;
+    }
+    .btn-primary:hover {
+      background: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(0,0,0,.22);
+    }
+    .btn-outline {
+      border-color: rgba(255,255,255,.75);
+      color: #fff;
+    }
+    .btn-outline:hover {
+      background: #fff;
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+    .slider-dots {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+      display: flex;
+      gap: 11px;
+    }
+    .slider-dots button {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background: transparent;
+      cursor: pointer;
+      transition: .25s;
+    }
+    .slider-dots button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: scale(1.15);
+    }
+
+    /* ========== SECTION COMMON ========== */
+    .section { padding: 86px 0; }
+    .section.alt { background: var(--light); }
+    .section-header {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 52px;
+    }
+    .section-header h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      color: var(--primary);
+      line-height: 1.15;
+      font-weight: 900;
+    }
+    .title-line {
+      display: block;
+      width: 68px;
+      height: 4px;
+      border-radius: 4px;
+      background: var(--accent);
+      margin: 18px auto 20px;
+    }
+    .section-header p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* ========== INDUSTRY SOLUTIONS ========== */
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .industry-card {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, .08);
+      transition: .3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .industry-card:hover {
+      transform: translateY(-9px);
+      box-shadow: var(--shadow);
+    }
+    .industry-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .industry-card:hover img { transform: scale(1.08); }
+    .industry-body {
+      padding: 22px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .industry-body h3 {
+      color: var(--primary);
+      font-size: 20px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .industry-body p {
+      color: #475569;
+      font-size: 14.5px;
+      margin-bottom: 12px;
+    }
+    .industry-body .recommend {
+      margin-top: auto;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* ========== PRODUCTS ========== */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .product-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: .3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+      border-color: transparent;
+    }
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .product-card:hover img { transform: scale(1.07); }
+    .product-body {
+      padding: 20px 18px 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .product-body h3 {
+      color: var(--primary);
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .product-body p {
+      color: #475569;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    .product-link {
+      margin-top: auto;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .product-link:hover { color: var(--primary); }
+
+    /* ========== NEWS ========== */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+    .news-column {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, .08);
+    }
+    .news-column h3 {
+      color: var(--primary);
+      font-size: 24px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--border);
+    }
+    .news-list li {
+      padding: 14px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .news-list li:last-child { border-bottom: 0; }
+    .news-list a {
+      font-weight: 700;
+      color: #334155;
+      transition: .2s;
+    }
+    .news-list a:hover { color: var(--accent); padding-left: 6px; }
+    .news-list span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* ========== FAQ ========== */
+    .faq-list { max-width: 920px; margin: 0 auto; }
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      transition: .25s;
+    }
+    .faq-item.active {
+      border-color: var(--accent);
+      box-shadow: 0 10px 28px rgba(245, 158, 11, .13);
+    }
+    .faq-question {
+      width: 100%;
+      border: 0;
+      background: #fff;
+      padding: 20px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .faq-question i {
+      color: var(--accent);
+      transition: transform .3s;
+      flex-shrink: 0;
+    }
+    .faq-item.active .faq-question i { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+      padding: 0 22px;
+    }
+    .faq-answer p {
+      color: #475569;
+      font-size: 15px;
+      padding: 0 0 22px;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: #07283f;
+      color: #cbd5e1;
+      padding: 72px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 50px;
+    }
+    .footer-brand h3 {
+      color: #fff;
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+    .footer-brand h3 span { color: var(--accent); }
+    .footer-brand p { margin-bottom: 12px; font-size: 14.5px; }
+    .footer-brand i { color: var(--accent); width: 20px; }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .footer-col li { margin-bottom: 11px; }
+    .footer-col a {
+      color: #cbd5e1;
+      font-size: 14.5px;
+      transition: .2s;
+    }
+    .footer-col a:hover { color: var(--accent); padding-left: 5px; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding: 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .social-icons a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,.1);
+      color: #fff;
+      transition: .25s;
+    }
+    .social-icons a:hover {
+      background: var(--accent);
+      color: #111827;
+      transform: translateY(-4px);
+    }
+    .copyright { font-size: 14px; color: #94a3b8; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1100px) {
+      .industry-grid, .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 992px) {
+      body { padding-top: 70px; }
+      .site-header, .nav-wrap { height: 70px; }
+      .nav-toggle { display: block; }
+      .lang-switch { display: none; }
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        padding: 18px 24px 28px;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        box-shadow: 0 18px 30px rgba(0,0,0,.25);
+      }
+      .main-nav.active { display: block; }
+      .main-nav > ul { display: block; }
+      .main-nav > ul > li {
+        border-bottom: 1px solid rgba(255,255,255,.12);
+      }
+      .main-nav > ul > li > a {
+        padding: 15px 0;
+        justify-content: space-between;
+      }
+      .dropdown, .subdropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        min-width: 0;
+        padding: 0 0 0 16px;
+        display: none;
+        border-radius: 0;
+      }
+      .main-nav .has-dropdown.open > .dropdown,
+      .main-nav .has-subdropdown.open > .subdropdown {
+        display: block;
+      }
+      .dropdown a {
+        color: #dbeafe;
+        padding: 10px 0;
+        white-space: normal;
+      }
+      .dropdown a:hover {
+        background: transparent;
+        color: var(--accent);
+        padding-left: 0;
+      }
+      .subdropdown { padding-left: 16px; }
+    }
+    @media (max-width: 760px) {
+      .hero-slider { height: 560px; }
+      .slide-content p { font-size: 16px; }
+      .news-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 560px) {
+      .industry-grid, .product-grid { grid-template-columns: 1fr; }
+      .section { padding: 64px 0; }
+      .hero-slider { height: 520px; }
+      .hero-btns { flex-direction: column; align-items: flex-start; }
+      .btn { width: 100%; }
+      .faq-question { font-size: 15px; padding: 17px 16px; }
+      .faq-answer { padding: 0 16px; }
+    }
+  </style>
 </head>
 <body>
-    <!-- 顶部导航 - 完整全套菜单 彻底修复缺失问题 -->
-    <header class="site-header">
-        <div class="container header-inner">
-            <a href="index.html" class="logo"><img src="satong-logo.png" alt="SATONG Logo"></a>
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-item active"><a href="index.html">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="#">Products</a>
-                        <ul class="dropdown-sub">
-                            <li class="sub-item drop-three">
-                                <a href="#">Automated Solutions</a>
-                                <ul class="dropdown-three">
-                                    <li><a href="#">Pallet AS/RS</a></li>
-                                    <li><a href="#">Box AS/RS</a></li>
-                                    <li><a href="#">Shuttle Racking System</a></li>
-                                    <li><a href="#">Four-Way Shuttle System</a></li>
-                                    <li><a href="#">CTU Robot System</a></li>
-                                    <li><a href="#">AGV Robot System</a></li>
-                                    <li><a href="#">Climbing Robot Solution</a></li&gt>
-                                    <li><a href="#">Automatic Conveyor Line</a></li>
-                                    <li><a href="#">Automatic Sorting Line</a></li>
-                                </ul>
-                            </li&gt>
-                            <li class="sub-item drop-three">
-                                <a href="#">Industrial Racks</a>
-                                <ul class="dropdown-three">
-                                    <li><a href="#">Pallet Racking</a></li>
-                                    <li><a href="#">Narrow Aisle Racking</a></li>
-                                    <li><a href="#">Double Deep Racking</a></li>
-                                    <li><a href="#">Drive-In Racking</a></li&gt>
-                                    <li><a href="#">Push-Back Racking</a></li&gt>
-                                    <li><a href="#">Gravity Flow Racking</a></li>
-                                    <li><a href="#">Mezzanine Racking</a></li>
-                                    <li><a href="#">Steel Platform</a></li>
-                                    <li><a href="#">Cantilever Racking</a></li>
-                                    <li><a href="#">Mold Storage Rack</a></li>
-                                </ul&gt>
-                            </li&gt>
-                            <li class="sub-item drop-three">
-                                <a href="#">Sorting Racks</a>
-                                <ul class="dropdown-three">
-                                    <li><a href="#">Layer Shelving</a></li>
-                                    <li><a href="#">Carton Flow Racking</a></li>
-                                    <li><a href="#">Die Storage Rack</a></li>
-                                    <li><a href="#">Ink Tray Rack</a></li>
-                                    <li><a href="#">Watermark Plate Rack</a></li>
-                                    <li><a href="#">Printed Sample Rack</a></li>
-                                    <li><a href="#">Film Rack</a></li>
-                                </ul>
-                            </li&gt>
-                            <li class="sub-item drop-three">
-                                <a href="#">Supporting Equipment</a>
-                                <ul class="dropdown-three">
-                                    <li><a href="#">Steel Pallet</a></li>
-                                    <li><a href="#">Plastic Pallet</a></li&gt>
-                                    <li><a href="#">Storage Cage</a></li&gt>
-                                    <li><a href="#">Metal Mesh Wall</a></li>
-                                </ul>
-                            </li&gt>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#">Solutions</a>
-                        <ul class="dropdown-sub">
-                            <li><a href="#">Cold Chain Food Industry Solution</a></li>
-                            <li><a href="#">Printing Industry Solution</a></li>
-                            <li><a href="#">Furniture Industry Solution</a></li>
-                            <li><a href="#">Medical Supplies Industry Solution</a></li>
-                        </ul&gt>
-                    </li&gt>
-                    <li class="nav-item dropdown">
-                        <a href="#">Cases</a>
-                        <ul class="dropdown-sub">
-                            <li><a href="#">Southeast Asia</a></li>
-                            <li><a href="#">Middle East</a></li>
-                            <li><a href="#">Europe</a></li>
-                            <li><a href="#">Latin America</a></li>
-                            <li><a href="#">Central Asia</a></li>
-                            <li><a href="#">Russian-speaking Regions</a></li&gt>
-                            <li><a href="#">Africa</a></li&gt>
-                            <li><a href="#">Oceania</a></li&gt>
-                        </ul&gt>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#">News</a>
-                        <ul class="dropdown-sub">
-                            <li><a href="#">Company News</a></li>
-                            <li><a href="#">Industry Insights</a></li>
-                            <li><a href="#">Q&A</a></li&gt>
-                        </ul&gt>
-                    </li&gt>
-                    <li class="nav-item"><a href="contact.html">Contact</a></li&gt>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">SAT<span>ONG</span></a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+
+          <li class="has-dropdown">
+            <a href="products.html">Products <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li class="has-subdropdown">
+                <a href="#">Automated Solutions <i class="fa-solid fa-chevron-right"></i></a>
+                <ul class="subdropdown">
+                  <li><a href="#">Pallet AS/RS</a></li>
+                  <li><a href="#">Box AS/RS</a></li>
+                  <li><a href="#">Shuttle Racking System</a></li>
+                  <li><a href="#">Four-Way Shuttle System</a></li>
+                  <li><a href="#">CTU Robot System</a></li>
+                  <li><a href="#">AGV Robot System</a></li>
+                  <li><a href="#">Climbing Robot Solution</a></li>
+                  <li><a href="#">Automatic Conveyor Line</a></li>
+                  <li><a href="#">Automatic Sorting Line</a></li>
                 </ul>
-            </nav>
-            <!-- 多语言切换 -->
-            <div class="lang-dropdown">
-                <div class="lang-select">
-                    <span class="lang-text">EN</span>
-                    <i class="lang-arrow">▼</i>
-                </div>
-                <ul class="lang-list">
-                    <li><a href="#" class="active-lang">English</a></li>
-                    <li><a href="#">Español</a></li>
-                    <li><a href="#">Português</a></li>
-                    <li><a href="#">العربية</a></li>
-                    <li><a href="#">Bahasa Indonesia</a></li>
-                    <li><a href="#">Русский</a></li&gt>
-                    <li><a href="#">فارسي</a></li&gt>
+              </li>
+              <li class="has-subdropdown">
+                <a href="#">Industrial Racks <i class="fa-solid fa-chevron-right"></i></a>
+                <ul class="subdropdown">
+                  <li><a href="#">Pallet Racking</a></li>
+                  <li><a href="#">Narrow Aisle Racking</a></li>
+                  <li><a href="#">Double Deep Racking</a></li>
+                  <li><a href="#">Drive-In Racking</a></li>
+                  <li><a href="#">Push-Back Racking</a></li>
+                  <li><a href="#">Gravity Flow Racking</a></li>
+                  <li><a href="#">Mezzanine Racking</a></li>
+                  <li><a href="#">Steel Platform</a></li>
+                  <li><a href="#">Cantilever Racking</a></li>
+                  <li><a href="#">Mold Storage Rack</a></li>
                 </ul>
-            </div>
+              </li>
+              <li class="has-subdropdown">
+                <a href="#">Sorting Racks <i class="fa-solid fa-chevron-right"></i></a>
+                <ul class="subdropdown">
+                  <li><a href="#">Layer Shelving</a></li>
+                  <li><a href="#">Carton Flow Racking</a></li>
+                  <li><a href="#">Die Storage Rack</a></li>
+                  <li><a href="#">Ink Tray Rack</a></li>
+                  <li><a href="#">Watermark Plate Rack</a></li>
+                  <li><a href="#">Printed Sample Rack</a></li>
+                  <li><a href="#">Film Rack</a></li>
+                </ul>
+              </li>
+              <li class="has-subdropdown">
+                <a href="#">Supporting Equipment <i class="fa-solid fa-chevron-right"></i></a>
+                <ul class="subdropdown">
+                  <li><a href="#">Steel Pallet</a></li>
+                  <li><a href="#">Plastic Pallet</a></li>
+                  <li><a href="#">Storage Cage</a></li>
+                  <li><a href="#">Metal Mesh Wall</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="solutions.html">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="#">Cold Chain & Food Industry</a></li>
+              <li><a href="#">Printing Industry</a></li>
+              <li><a href="#">Furniture Industry</a></li>
+              <li><a href="#">Medical Supplies Industry</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="cases.html">Cases <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="#">Southeast Asia</a></li>
+              <li><a href="#">Middle East</a></li>
+              <li><a href="#">Europe</a></li>
+              <li><a href="#">Latin America</a></li>
+              <li><a href="#">Central Asia</a></li>
+              <li><a href="#">Russian-speaking Regions</a></li>
+              <li><a href="#">Africa</a></li>
+              <li><a href="#">Oceania</a></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <a href="news.html">News <i class="fa-solid fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="#">Company News</a></li>
+              <li><a href="#">Industry Insights</a></li>
+              <li><a href="#">Q&A</a></li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch">
+        <a href="#">EN</a><span>|</span>
+        <a href="#">ES</a><span>|</span>
+        <a href="#">FR</a><span>|</span>
+        <a href="#">RU</a><span>|</span>
+        <a href="#">AR</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO SLIDER ========== -->
+  <section class="hero-slider" aria-label="SATONG warehouse racking manufacturer">
+    <div class="slide active" style="background-image:url('https://placehold.co/1920x800/0b3a5b/ffffff?text=20+Years+Factory+Strength');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="slide-content">
+          <h1>20 Years Factory Strength in Warehouse Racking</h1>
+          <p>Jiangsu SATONG is a direct manufacturer of industrial racking and automated storage systems, serving global B2B contractors, traders and factories.</p>
+          <div class="hero-btns">
+            <a href="contact.html" class="btn btn-primary">Get Free Design <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="products.html" class="btn btn-outline">Explore Products</a>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
 
-    <!-- 轮播Banner -->
-    <section class="banner-slider">
-        <div class="slide-item active" style="background-image:url(banner-factory.jpg)">
-            <div class="container banner-content">
-                <div class="banner-mask">
-                    <h1>20 Years of Warehouse Racking Manufacturing Experience</h1>
-                    <p>Jiangsu Satong Intelligent Logistics Equipment Co., Ltd., parent company founded in 2006. With 20 years of dedication, we focus on R&D, design, manufacturing and after-sales service. We provide reliable project support for traders, contractors, engineers and medium-to-large B-end customers, solving your pre-sales and after-sales worries.</p>
-                    <div class="banner-buttons">
-                        <a href="contact.html" class="btn btn-primary">Get a Project Quotation</a>
-                        <a href="#" class="btn btn-outline">Factory Video</a>
-                    </div&gt>
-                </div&gt>
-            </div&gt>
-        </div&gt>
-        <div class="slide-item" style="background-image:url(banner-fair.jpg)">
-            <div class="container banner-content">
-                <div class="banner-mask">
-                    <h1>Upcoming 140th Canton Fair Exhibition</h1>
-                    <p>Jiangsu Satong Intelligent Logistics Equipment Co., Ltd. will participate in Phase 1 of the 140th Canton Fair. Booth No.: 18.1F31, Exhibition Date: October 15 - October 19, 2026. We sincerely invite you to visit our booth and welcome advance appointment.</p>
-                    <div class="banner-buttons">
-                        <a href="contact.html" class="btn btn-primary">Book a Visit</a>
-                        <a href="#" class="btn btn-outline">Previous Exhibition Video</a>
-                    </div&gt>
-                </div&gt>
-            </div&gt>
-        </div&gt>
-        <div class="slide-item" style="background-image:url(banner-warehouse.jpg)">
-            <div class="container banner-content">
-                <div class="banner-mask">
-                    <h1>Full-scene Intelligent Warehouse Solutions</h1>
-                    <p>With 20 years of professional warehouse rack manufacturing experience, Satong provides one-stop solutions from scheme design and product manufacturing to project support for global traders, contractors and medium-to-large B-end customers, meeting various full-scene warehouse storage demands.</p>
-                    <div class="banner-buttons">
-                        <a href="#" class="btn btn-primary">More Solutions</a>
-                        <a href="#" class="btn btn-outline">More Products</a>
-                    </div&gt>
-                </div&gt>
-            </div&gt>
-        </div&gt>
-        <div class="slide-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div&gt>
-    </section>
+    <div class="slide" style="background-image:url('https://placehold.co/1920x800/1e3a8a/ffffff?text=Canton+Fair+Exhibition');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="slide-content">
+          <h1>Canton Fair & Global Exhibition Backing</h1>
+          <p>Meet SATONG at international trade shows. We support overseas projects with fast quotation, customized design and export packaging.</p>
+          <div class="hero-btns">
+            <a href="cases.html" class="btn btn-primary">View Global Cases <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="contact.html" class="btn btn-outline">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- 行业解决方案 - 全新四列图片布局（新增医疗行业） -->
-    <section class="home-solution section bg-light">
-        <div class="container">
-            <h2 class="section-title has-decoration">Industry Solutions</h2&gt>
-            <div class="solution-list">
-                <div class="solution-item">
-                    <div class="solution-img"><img src="solution-cold.jpg" alt="Cold Chain Industry Solution"></div>
-                    <h3>Cold Chain & Food Industry</h3>
-                    <p>Professional anti-rust, low-temperature resistant racking solutions, suitable for cold storage, food processing and fresh food storage scenarios, ensuring storage safety and long service life in low-temperature and humid environments.</p>
-                </div&gt>
-                <div class="solution-item">
-                    <div class="solution-img"><img src="solution-print.jpg" alt="Printing Industry Solution"></div>
-                    <h3>Printing Industry</h3>
-                    <p>Customized special racks for printing materials, suitable for ink trays, printing plates, sample films and paper storage, realizing classified storage and efficient access of printing supplies.</p>
-                </div&gt>
-                <div class="solution-item">
-                    <div class="solution-img"><img src="solution-furniture.jpg" alt="Furniture Industry Solution"></div>
-                    <h3>Furniture Industry</h3>
-                    <p>Heavy-duty cantilever racks and mezzanine platforms for furniture, wooden materials and long-size goods, solving the storage problems of large, long and irregular furniture products.</p>
-                </div&gt>
-                <div class="solution-item">
-                    <div class="solution-img"><img src="solution-medical.jpg" alt="Medical Supplies Industry Solution"></div>
-                    <h3>Medical Supplies Industry</h3>
-                    <p>Dust-free, sterile and anti-corrosion storage rack solutions, compliant with medical storage standards, suitable for medical supplies, pharmaceutical and laboratory material storage.</p>
-                </div&gt>
-            </div&gt>
-        </div&gt>
-    </section>
+    <div class="slide" style="background-image:url('https://placehold.co/1920x800/065f46/ffffff?text=Automated+Warehouse+Solutions');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="slide-content">
+          <h1>Intelligent Warehouse Solutions for Every Scenario</h1>
+          <p>From pallet racking to AS/RS, shuttle systems and AGV robots, SATONG delivers one-stop customized storage solutions.</p>
+          <div class="hero-btns">
+            <a href="solutions.html" class="btn btn-primary">Get Solution <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="products.html" class="btn btn-outline">View Products</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- 主力产品栏目（8款核心产品） -->
-    <section class="home-product section">
-        <div class="container">
-            <h2 class="section-title has-decoration">Core Products</h2&gt>
-            <div class="product-list">
-                <div class="product-item">
-                    <h3>Pallet Racking</h3>
-                    <p>Standard heavy-duty pallet racks, high load capacity, flexible assembly, suitable for most warehouse pallet storage scenarios, the most widely used storage rack.</p>
-                </div&gt>
-                <div class="product-item">
-                    <h3>Cantilever Racking</h3>
-                    <p>Designed for long, tubular and irregular goods, widely used in steel, wood, aluminum profile and building materials storage.</p>
-                </div&gt>
-                <div class="product-item">
-                    <h3>Drive-In Racking</h3>
-                    <p>High-density storage racks, no aisle partition, greatly improving warehouse space utilization, suitable for large-volume single-variety goods storage.</p>
-                </div&gt>
-                <div class="product-item">
-                    <h3>Mezzanine Racking</h3&gt>
-                    <p>Make full use of warehouse vertical space, build multi-layer storage platforms, suitable for low-rise warehouse space expansion and small goods storage.</p>
-                </div&gt>
-                <div class="product-item">
-                    <h3>Shuttle Racking System</h3>
-                    <p>Semi-automatic intelligent storage system, high efficiency and high density, reducing manual operation and improving warehouse automation level.</p>
-                </div&gt>
-                <div class="product-item">
-                    <h3>AS/RS Automated Warehouse</h3>
-                    <p>Fully automatic intelligent storage system, realizing unmanned access, inventory counting and intelligent management, suitable for large modern logistics warehouses.</p>
-                </div&gt>
-                <div class="product-item">
-                    <h3>Push-Back Racking</h3>
-                    <p>Sequential access storage structure, automatic goods sliding, suitable for multi-batch and small-batch goods storage, efficient and labor-saving.</p>
-                </div&gt>
-                <div class="product-item">
-                    <h3>Gravity Flow Racking</h3>
-                    <p>Gravity self-sliding design, realizing first-in first-out (FIFO) storage, very suitable for food, medicine and time-sensitive goods storage.</p>
-                </div&gt>
-            </div&gt>
-        </div&gt>
-    </section>
+    <div class="slider-dots" aria-label="Slider navigation">
+      <button class="active" aria-label="Slide 1"></button>
+      <button aria-label="Slide 2"></button>
+      <button aria-label="Slide 3"></button>
+    </div>
+  </section>
 
-    <!-- 新闻栏目 -->
-    <section class="home-news section bg-light">
-        <div class="container">
-            <h2 class="section-title has-decoration">News & Insights</h2&gt>
-            <div class="news-list">
-                <div class="news-item">
-                    <span class="tag company-news">Company News</span&gt>
-                    <h3>20 Years Manufacturing Experience Accumulation</h3&gt>
-                    <p>SATONG has focused on warehouse rack and intelligent logistics equipment manufacturing since 2006.</p>
-                </div&gt>
-                <div class="news-item">
-                    <span class="tag industry-insight">Industry Insights</span&gt>
-                    <h3>Global Intelligent Warehouse Development Trend</h3>
-                    <p>Automated storage systems are gradually becoming standard for modern logistics warehouses.</p>
-                </div&gt>
-            </div&gt>
-        </div&gt>
-    </section>
+  <!-- ========== INDUSTRY SOLUTIONS ========== -->
+  <section class="section" id="industry-solutions">
+    <div class="container">
+      <div class="section-header">
+        <h2>Industry Solutions</h2>
+        <span class="title-line"></span>
+        <p>Customized warehouse racking and storage systems for cold chain, printing, furniture and medical supplies industries.</p>
+      </div>
 
-    <!-- 单栏折叠FAQ -->
-    <section class="home-qa section">
-        <div class="container">
-            <h2 class="section-title has-decoration">Frequently Asked Questions</h2&gt>
-            <div class="qa-collapse-list">
-                <div class="qa-collapse-item">
-                    <div class="qa-question">1. Do you provide customized warehouse rack solutions?<i class="fas fa-plus"></i></div>
-                    <div class="qa-answer">Yes, we provide one-stop customized services including scheme design, structural optimization, production manufacturing and on-site installation. We customize products according to your warehouse size, floor load, goods specifications and storage requirements to meet personalized storage needs.</div&gt>
-                </div&gt>
-                <div class="qa-collapse-item">
-                    <div class="qa-question">2. What is your product warranty period?<i class="fas fa-plus"></i></div>
-                    <div class="qa-answer">We provide 5-year warranty for all standard racking products and lifelong after-sales technical support. Damaged parts caused by non-human factors will be replaced free of charge within the warranty period.</div&gt>
-                </div&gt>
-                <div class="qa-collapse-item">
-                    <div class="qa-question">3. Are you a factory or trading company?<i class="fas fa-plus"></i></div>
-                    <div class="qa-answer">We are a professional direct manufacturer with 20 years of production experience. Our factory covers 30,000 square meters, with complete production equipment, independent R&D team and strict quality inspection system, supporting factory direct sales.</div&gt>
-                </div&gt>
-                <div class="qa-collapse-item">
-                    <div class="qa-question">4. What certifications do your products have?<i class="fas fa-plus"></i></div>
-                    <div class="qa-answer">Our products have passed ISO9001 quality management system certification, CE certification, SGS inspection and multiple national utility model and invention patents, meeting European and international export standards.</div&gt>
-                </div&gt>
-                <div class="qa-collapse-item">
-                    <div class="qa-question">5. What is your production lead time?<i class="fas fa-plus"></i></div>
-                    <div class="qa-answer">Standard products can be delivered within 7-10 working days. For customized products and large-scale engineering projects, the production cycle is 15-30 working days, depending on the project quantity and customization difficulty.</div&gt>
-                </div&gt>
-                <div class="qa-collapse-item">
-                    <div class="qa-question">6. Do you provide overseas installation service?<i class="fas fa-plus"></i></div>
-                    <div class="qa-answer">Yes. We can provide overseas on-site installation guidance service, and also support remote video installation guidance. We have professional international project teams with rich experience in overseas project docking.</div&gt>
-                </div&gt>
-                <div class="qa-collapse-item">
-                    <div class="qa-question">7. What payment terms do you accept?<i class="fas fa-plus"></i></div&gt>
-                    <div class="qa-answer">We support multiple payment terms: T/T, L/C, Western Union, etc. The conventional term is 30% deposit in advance and 70% balance before delivery.</div&gt>
-                </div&gt>
-                <div class="qa-collapse-item">
-                    <div class="qa-question">8. Can you provide free design and quotation?<i class="fas fa-plus"></i></div>
-                    <div class="qa-answer">Absolutely free. We provide free professional warehouse scheme design, product matching and detailed quotation according to your actual needs, with no hidden charges.</div&gt>
-                </div&gt>
-                <div class="qa-collapse-item">
-                    <div class="qa-question">9. What is the maximum load capacity of your pallet racks?<i class="fas fa-plus"></i></div&gt>
-                    <div class="qa-answer">Our standard pallet racks can bear 500kg-5000kg per layer. We can customize super heavy-duty racks according to customer load requirements to meet heavy-load industrial storage needs.</div&gt>
-                </div&gt>
-                <div class="qa-collapse-item">
-                    <div class="qa-question">10. Do your products support ocean shipping and container loading?<i class="fas fa-plus"></i></div&gt>
-                    <div class="qa-answer">All products are designed for export packaging, supporting FCL and LCL ocean shipping. We optimize the packaging and loading scheme to save container space and reduce your logistics costs.</div&gt>
-                </div&gt>
-            </div&gt>
-        </div&gt>
-    </section>
+      <div class="industry-grid">
+        <article class="industry-card">
+          <img src="https://placehold.co/600x400/0b3a5b/ffffff?text=Cold+Chain+%26+Food" alt="Cold chain and food warehouse racking solution">
+          <div class="industry-body">
+            <h3>Cold Chain & Food Industry</h3>
+            <p>Low-temperature anti-rust and anti-corrosion steel for -25°C cold storage, food processing plants, frozen food warehouses and cold chain transit centers. High-density storage improves cold room utilization.</p>
+            <p class="recommend">Recommended: Drive-In Racking, Shuttle Racking, Heavy Duty Pallet Racking, Low-Temperature Steel Platform</p>
+          </div>
+        </article>
 
-    <!-- 页脚（完整全套社媒图标 彻底修复丢失问题） -->
-    <footer class="site-footer">
-        <div class="container footer-top">
-            <div class="footer-col">
-                <h3>Brand Information</h3>
-                <p><strong>CHINA SATONG RACKS FACTORY</strong></p>
-                <p>Jiangsu Satong Intelligent Logistics Equipment Co., Ltd.</p>
-                <p>Focus on warehouse rack manufacturing and intelligent storage solutions.</p>
-                <p><i class="fa-solid fa-envelope"></i> info@satong.com</p>
-                <p><i class="fa-solid fa-phone"></i> +86-13395271980</p>
-                <p><i class="fa-solid fa-location-dot"></i> No. 4, Fuxing Road, Tushan Town Industrial Park, Pizhou City, Jiangsu Province, China</p>
-            </div&gt>
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Products</a></li&gt>
-                    <li><a href="#">Solutions</a></li&gt>
-                    <li><a href="#">Cases</a></li&gt>
-                    <li><a href="#">News</a></li&gt>
-                    <li><a href="contact.html">Contact Us</a></li&gt>
-                </ul&gt>
-            </div&gt>
-            <div class="footer-col">
-                <h3>Industry Solutions</h3>
-                <ul>
-                    <li><a href="#">Cold Chain Food Industry Solution</a></li>
-                    <li><a href="#">Printing Industry Solution</a></li&gt>
-                    <li><a href="#">Furniture Industry Solution</a></li&gt>
-                    <li><a href="#">Medical Supplies Industry Solution</a></li&gt>
-                </ul&gt>
-            </div&gt>
-        </div&gt>
-        <div class="container follow-us-wrap">
-            <h3>Follow Us</h3&gt>
-            <div class="social-icons">
-                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div&gt>
-        </div&gt>
-        <div class="copyright">
-            <p>© 2026 Jiangsu Satong Intelligent Logistics Equipment Co., Ltd. All rights reserved.</p></div>
-    </footer>
+        <article class="industry-card">
+          <img src="https://placehold.co/600x400/1d4ed8/ffffff?text=Printing+Industry" alt="Printing industry warehouse racking solution">
+          <div class="industry-body">
+            <h3>Printing Industry</h3>
+            <p>Specialized racks for ink pallets, printing plates, samples, film rolls and paper materials. Clear classification, easy access and no extrusion, reducing material damage in printing workshops.</p>
+            <p class="recommend">Recommended: Printing Material Rack, Layer Shelving, Carton Flow Racking, Ink Tray Rack</p>
+          </div>
+        </article>
 
-    <script src="script.js"></script>
+        <article class="industry-card">
+          <img src="https://placehold.co/600x400/7c3aed/ffffff?text=Furniture+Industry" alt="Furniture industry warehouse racking solution">
+          <div class="industry-body">
+            <h3>Furniture Industry</h3>
+            <p>Solves long, large, irregular and heavy goods storage. Cantilever racking is ideal for pipes, wood and aluminum profiles, while mezzanine platforms maximize vertical space.</p>
+            <p class="recommend">Recommended: Cantilever Racking, Mezzanine Racking, Steel Platform, Heavy Duty Pallet Racking</p>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <img src="https://placehold.co/600x400/059669/ffffff?text=Medical+Supplies" alt="Medical supplies warehouse racking solution">
+          <div class="industry-body">
+            <h3>Medical Supplies Industry</h3>
+            <p>Dust-free, sterile, anti-corrosion and eco-friendly materials meet medical warehouse hygiene standards. Supports classified storage for medical consumables, pharmaceuticals and equipment.</p>
+            <p class="recommend">Recommended: Clean Layer Shelving, Heavy Medical Pallet Racking, Intelligent Storage System, Sterile Storage Equipment</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CORE PRODUCTS ========== -->
+  <section class="section alt" id="core-products">
+    <div class="container">
+      <div class="section-header">
+        <h2>Core Products</h2>
+        <span class="title-line"></span>
+        <p>8 best-selling warehouse racking and automated storage products from SATONG factory.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="https://placehold.co/600x400/0f172a/ffffff?text=Pallet+Racking" alt="Pallet racking warehouse storage rack">
+          <div class="product-body">
+            <h3>Pallet Racking</h3>
+            <p>Standard heavy-duty pallet racks with high load capacity and flexible assembly. The most widely used storage rack for palletized goods, with customizable layers and load-bearing standards.</p>
+            <a href="#" class="product-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://placehold.co/600x400/1e293b/ffffff?text=Cantilever+Racking" alt="Cantilever racking for long goods">
+          <div class="product-body">
+            <h3>Cantilever Racking</h3>
+            <p>Designed for long tubular goods, irregular products and large materials. Widely used in steel, wood, aluminum profile, building materials and furniture industries.</p>
+            <a href="#" class="product-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://placehold.co/600x400/334155/ffffff?text=Drive-In+Racking" alt="Drive-in racking high density storage">
+          <div class="product-body">
+            <h3>Drive-In Racking</h3>
+            <p>High-density integrated storage rack with no aisle partition. Improves warehouse space utilization by more than 30%, suitable for large-volume single-variety goods.</p>
+            <a href="#" class="product-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://placehold.co/600x400/475569/ffffff?text=Mezzanine+Racking" alt="Mezzanine racking multi-layer platform">
+          <div class="product-body">
+            <h3>Mezzanine Racking</h3>
+            <p>Makes full use of warehouse vertical space to build multi-layer storage platforms. Best solution for low-rise warehouse expansion and small to medium goods storage.</p>
+            <a href="#" class="product-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://placehold.co/600x400/065f46/ffffff?text=Shuttle+Racking" alt="Shuttle racking system automatic storage">
+          <div class="product-body">
+            <h3>Shuttle Racking System</h3>
+            <p>Semi-automatic intelligent storage equipment with shuttle car for automatic goods access. Combines high density and high efficiency, reducing labor costs.</p>
+            <a href="#" class="product-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://placehold.co/600x400/7c2d12/ffffff?text=AS%2FRS+Warehouse" alt="AS/RS automated warehouse system">
+          <div class="product-body">
+            <h3>AS/RS Automated Warehouse</h3>
+            <p>Fully unmanned intelligent warehouse system with stacker crane, conveyor line and management system. Suitable for modern logistics centers and smart factories.</p>
+            <a href="#" class="product-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://placehold.co/600x400/831843/ffffff?text=Push-Back+Racking" alt="Push-back racking sliding storage">
+          <div class="product-body">
+            <h3>Push-Back Racking</h3>
+            <p>Sequential sliding storage structure for automatic goods sliding and layered storage. Suitable for multi-batch and small-batch goods with high space utilization.</p>
+            <a href="#" class="product-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://placehold.co/600x400/1e40af/ffffff?text=Gravity+Flow+Racking" alt="Gravity flow racking FIFO storage">
+          <div class="product-body">
+            <h3>Gravity Flow Racking</h3>
+            <p>Gravity self-sliding design for first-in first-out storage. Ideal for time-sensitive goods such as food, medicine and daily necessities, avoiding inventory backlog.</p>
+            <a href="#" class="product-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWS & INSIGHTS ========== -->
+  <section class="section" id="news-insights">
+    <div class="container">
+      <div class="section-header">
+        <h2>News & Insights</h2>
+        <span class="title-line"></span>
+        <p>Company updates and global warehouse industry trends from SATONG.</p>
+      </div>
+
+      <div class="news-grid">
+        <div class="news-column">
+          <h3>Company News</h3>
+          <ul class="news-list">
+            <li><a href="#">SATONG Showcases New Shuttle Racking System at Canton Fair</a><span>Sep 2026 · Exhibition</span></li>
+            <li><a href="#">Factory Upgrade: New Automated Production Line Put Into Operation</a><span>Aug 2026 · Factory News</span></li>
+            <li><a href="#">SATONG Passed ISO9001, CE and SGS Annual Review</a><span>Jul 2026 · Certification</span></li>
+            <li><a href="#">New Cold Chain Warehouse Project Delivered in Southeast Asia</a><span>Jun 2026 · Overseas Project</span></li>
+          </ul>
+        </div>
+
+        <div class="news-column">
+          <h3>Industry Insights</h3>
+          <ul class="news-list">
+            <li><a href="#">Global Warehouse Automation Trends in 2026</a><span>Industry Report</span></li>
+            <li><a href="#">How to Choose the Right Pallet Racking for Export Projects</a><span>Buying Guide</span></li>
+            <li><a href="#">Cold Chain Storage Racking: Material and Safety Standards</a><span>Technical Insight</span></li>
+            <li><a href="#">AS/RS vs Shuttle Racking: Which Is Better for Your Warehouse?</a><span>Solution Comparison</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section alt" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <span class="title-line"></span>
+        <p>High-frequency questions from global B2B warehouse racking buyers.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question">1. Do you provide customized warehouse rack solutions? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-answer"><p>Yes, we provide one-stop customized services including scheme design, structural optimization, production manufacturing and on-site installation. We customize products according to your warehouse size, floor load, goods specifications and storage requirements to meet personalized storage needs.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">2. What is your product warranty period? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-answer"><p>We provide 5-year warranty for all standard racking products and lifelong after-sales technical support. Damaged parts caused by non-human factors will be replaced free of charge within the warranty period.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">3. Are you a factory or trading company? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-answer"><p>We are a professional direct manufacturer with 20 years of production experience. Our factory covers 30,000 square meters, with complete production equipment, independent R&D team and strict quality inspection system, supporting factory direct sales.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">4. What certifications do your products have? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-answer"><p>Our products have passed ISO9001 quality management system certification, CE certification, SGS inspection and multiple national utility model and invention patents, meeting European and international export standards.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">5. What is your production lead time? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-answer"><p>Standard products can be delivered within 7-10 working days. For customized products and large-scale engineering projects, the production cycle is 15-30 working days, depending on the project quantity and customization difficulty.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">6. Do you provide overseas installation service? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-answer"><p>Yes. We can provide overseas on-site installation guidance service, and also support remote video installation guidance. We have professional international project teams with rich experience in overseas project docking.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">7. What payment terms do you accept? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-answer"><p>We support multiple payment terms: T/T, L/C, Western Union, etc. The conventional term is 30% deposit in advance and 70% balance before delivery.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">8. Can you provide free design and quotation? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-answer"><p>Absolutely free. We provide free professional warehouse scheme design, product matching and detailed quotation according to your actual needs, with no hidden charges.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">9. What is the maximum load capacity of your pallet racks? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-answer"><p>Our standard pallet racks can bear 500kg-5000kg per layer. We can customize super heavy-duty racks according to customer load requirements to meet heavy-load industrial storage needs.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">10. Do your products support ocean shipping and container loading? <i class="fa-solid fa-plus"></i></button>
+          <div class="faq-answer"><p>All products are designed for export packaging, supporting FCL and LCL ocean shipping. We optimize the packaging and loading scheme to save container space and reduce your logistics costs.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>SAT<span>ONG</span></h3>
+        <p>Jiangsu Satong Intelligent Logistics Equipment Co., Ltd.</p>
+        <p>20 years professional warehouse racking & intelligent storage system manufacturer. Source factory, free design, 5-year warranty, global export support.</p>
+        <p><i class="fa-solid fa-location-dot"></i> No. 4, Fuxing Road, Tushan Town Industrial Park, Pizhou City, Jiangsu Province, China</p>
+        <p><i class="fa-solid fa-phone"></i> +86-13395271980</p>
+        <p><i class="fa-solid fa-envelope"></i> info@satong.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="cases.html">Cases</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Industry Solutions</h4>
+        <ul>
+          <li><a href="#">Cold Chain & Food Industry</a></li>
+          <li><a href="#">Printing Industry</a></li>
+          <li><a href="#">Furniture Industry</a></li>
+          <li><a href="#">Medical Supplies Industry</a></li>
+          <li><a href="#">Automated Warehouse Solutions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="social-icons">
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+      <p class="copyright">© 2026 SATONG. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      /* Mobile navigation */
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.querySelector('.main-nav');
+
+      navToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('active');
+      });
+
+      /* Mobile dropdown toggle */
+      document.querySelectorAll('.has-dropdown > a, .has-subdropdown > a').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          if (window.innerWidth <= 992) {
+            e.preventDefault();
+            const parent = this.parentElement;
+            parent.classList.toggle('open');
+          }
+        });
+      });
+
+      /* Hero slider */
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.slider-dots button');
+      let currentSlide = 0;
+      let sliderTimer;
+
+      function showSlide(index) {
+        slides.forEach(function (slide, i) {
+          slide.classList.toggle('active', i === index);
+        });
+        dots.forEach(function (dot, i) {
+          dot.classList.toggle('active', i === index);
+        });
+        currentSlide = index;
+      }
+
+      function nextSlide() {
+        showSlide((currentSlide + 1) % slides.length);
+      }
+
+      function startSlider() {
+        clearInterval(sliderTimer);
+        sliderTimer = setInterval(nextSlide, 5000);
+      }
+
+      dots.forEach(function (dot, index) {
+        dot.addEventListener('click', function () {
+          showSlide(index);
+          startSlider();
+        });
+      });
+
+      if (slides.length > 0) {
+        startSlider();
+      }
+
+      /* FAQ single expand */
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(function (item) {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        question.addEventListener('click', function () {
+          faqItems.forEach(function (other) {
+            if (other !== item) {
+              other.classList.remove('active');
+              other.querySelector('.faq-answer').style.maxHeight = null;
+            }
+          });
+
+          item.classList.toggle('active');
+
+          if (item.classList.contains('active')) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          } else {
+            answer.style.maxHeight = null;
+          }
+        });
+      });
+
+      /* Open first FAQ by default */
+      const firstFaq = document.querySelector('.faq-item.active .faq-answer');
+      if (firstFaq) {
+        firstFaq.style.maxHeight = firstFaq.scrollHeight + 'px';
+      }
+    });
+  </script>
 </body>
 </html>
