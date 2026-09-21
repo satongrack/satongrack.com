@@ -30,13 +30,11 @@ const qaItems = document.querySelectorAll('.qa-collapse-item');
 qaItems.forEach(item => {
     const question = item.querySelector('.qa-question');
     question.addEventListener('click', () => {
-        // 关闭其他问答
         qaItems.forEach(otherItem => {
             if(otherItem !== item){
                 otherItem.classList.remove('active');
             }
         })
-        // 切换当前
         item.classList.toggle('active');
     })
 })
