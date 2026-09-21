@@ -31,13 +31,17 @@ ul{list-style:none;}
 .dropdown:hover > .dropdown-sub{display:block;}
 .drop-three:hover > .dropdown-three{display:block;}
 
-/* Banner Slider */
-.banner-slider{position:relative;height:72vh;min-height:500px;overflow:hidden;}
-.slide-item{position:absolute;width:100%;height:100%;left:0;top:0;background-size:cover;background-position:center;opacity:0;transition:opacity 0.8s;}
+/* Banner Slider 【优化：1920*900 尺寸 + 20%透明底色遮罩】 */
+.banner-slider{position:relative;width:100%;height:900px;overflow:hidden;}
+.slide-item{position:absolute;width:100%;height:100%;left:0;top:0;background-size:1920px 900px;background-position:center top;background-repeat:no-repeat;opacity:0;transition:opacity 0.8s;}
 .slide-item.active{opacity:1;}
-.banner-content{position:absolute;left:5%;top:50%;transform:translateY(-50%);color:#fff;max-width:700px;}
-.banner-content h1{font-size:42px;margin-bottom:20px;line-height:1.3;}
-.banner-content p{font-size:16px;margin-bottom:30px;line-height:1.8;}
+
+/* 20% 黑色透明底色（文案按钮区域） */
+.banner-content{position:absolute;left:5%;top:50%;transform:translateY(-50%);max-width:700px;}
+.banner-mask{background:rgba(0,0,0,0.2);padding:40px;border-radius:6px;}
+
+.banner-content h1{font-size:42px;margin-bottom:20px;line-height:1.3;color:#fff;}
+.banner-content p{font-size:16px;margin-bottom:30px;line-height:1.8;color:#fff;}
 .banner-buttons{display:flex;gap:15px;}
 .btn{padding:12px 28px;border-radius:2px;font-weight:600;transition:0.3s;}
 .btn-primary{background:#0066b3;color:#fff;border:2px solid #0066b3;}
@@ -46,7 +50,7 @@ ul{list-style:none;}
 .btn-outline:hover{background:#ffffff22;}
 
 /* Slider Dots */
-.slide-dots{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;gap:12px;}
+.slide-dots{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;gap:12px;z-index:10;}
 .dot{width:12px;height:12px;border-radius:50%;background:#ffffff50;cursor:pointer;}
 .dot.active{background:#fff;}
 
@@ -77,10 +81,13 @@ ul{list-style:none;}
 @media(max-width:992px){
     .footer-top{grid-template-columns:1fr 1fr;}
     .news-list,.qa-list{grid-template-columns:1fr;}
+    .banner-slider{height:600px;}
 }
 @media(max-width:768px){
     .footer-top{grid-template-columns:1fr;}
     .banner-content h1{font-size:28px;}
     .banner-buttons{flex-direction:column;}
     .main-nav{display:none;}
+    .banner-slider{height:500px;}
+    .banner-mask{padding:25px;}
 }
