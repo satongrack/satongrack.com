@@ -1,391 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SATONG - Warehouse Racking & Automated Storage Solutions from China</title>
-    <meta name="description" content="SATONG is professional manufacturer of heavy duty warehouse racking, shuttle rack, AS/RS automated warehouse and conveyor system. Custom storage solutions for global logistics & factory projects.">
-    <meta name="keywords" content="warehouse racking, pallet rack, shuttle rack, AS/RS, automated warehouse, cantilever rack, mezzanine floor">
-    <!-- Hreflang for multi-language SEO -->
-    <link rel="alternate" hreflang="en" href="https://satongrack.com/">
-    <link rel="alternate" hreflang="es" href="https://satongrack.com/es/">
-    <link rel="alternate" hreflang="pt" href="https://satongrack.com/pt/">
-    <link rel="alternate" hreflang="id" href="https://satongrack.com/id/">
-    <link rel="alternate" hreflang="ru" href="https://satongrack.com/ru/">
-    <link rel="alternate" hreflang="ar" href="https://satongrack.com/ar/">
-    <link rel="alternate" hreflang="x-default" href="https://satongrack.com/">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
-        :root{--primary:#0f3460;--accent:#ff7800;--light:#f5f7fa;--gray:#666;--white:#fff;}
-        body{color:#333;background:var(--white);line-height:1.6;}
-        .container{max-width:1200px;margin:0 auto;padding:0 20px;}
-        /* Header */
-        header{background:var(--primary);color:var(--white);position:sticky;top:0;z-index:999;box-shadow:0 2px 8px #0003;}
-        .header-wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
-        .logo{font-size:24px;font-weight:bold;color:var(--white);text-decoration:none;}
-        nav ul{display:flex;gap:24px;list-style:none;}
-        nav a{color:var(--white);text-decoration:none;font-weight:500;transition:color 0.2s;}
-        nav a:hover{color:var(--accent);}
-         .lang-switch{background:#224b80;border:none;color:#fff;padding:6px 8px;border-radius:4px;cursor:pointer;width:130px;}
-        /* Hero Banner */
-        .hero{background:linear-gradient(rgba(15,52,96,0.85),rgba(15,52,96,0.85)),url('factory-bg.jpg');background-size:cover;background-position:center;color:white;padding:120px 0;}
-        .hero h1{font-size:42px;margin-bottom:16px;}
-        .hero p{font-size:18px;max-width:700px;margin-bottom:32px;opacity:0.95;}
-        .btn-group{display:flex;gap:16px;flex-wrap:wrap;}
-        .btn{background:var(--accent);color:#fff;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:bold;border:none;cursor:pointer;transition:0.2s;}
-        .btn:hover{background:#e06a00;}
-        .btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent);}
-        .btn-outline:hover{background:var(--accent);color:white;}
-        /* Section common */
-        section{padding:70px 0;}
-        .section-title{text-align:center;font-size:32px;color:var(--primary);margin-bottom:48px;}
-        .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
-        .card{background:var(--light);padding:24px;border-radius:8px;}
-        .card h3{color:var(--primary);margin-bottom:12px;}
-        /* Footer */
-        footer{background:#0b2748;color:#fff;padding:50px 0;}
-        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;}
-        /* Floating WhatsApp */
-        .wa-float{position:fixed;right:24px;bottom:24px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 4px 12px #0004;z-index:998;}
-        /* Form */
-        .form-wrap{background:var(--light);padding:32px;border-radius:8px;}
-        .form-row{margin-bottom:18px;}
-        label{display:block;margin-bottom:6px;font-weight:500;}
-        input,select,textarea{width:100%;padding:12px;border:1px solid #ddd;border-radius:4px;font-size:16px;}
-        textarea{min-height:120px;resize:vertical;}
-        /* Mobile nav simple */
-        @media(max-width:768px){
-            nav ul{display:none;}
-            .hero h1{font-size:30px;}
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SATONG | Warehouse Racking & Automated Storage Solutions</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+:root{--primary:#0f3460;--accent:#ff7800;--light:#f5f7fa;--gray:#666;--white:#fff;}
+body{color:#333;background:var(--white);line-height:1.6;}
+.container{max-width:1280px;margin:0 auto;padding:0 20px;}
+/* Header */
+header{background:var(--primary);color:var(--white);position:sticky;top:0;z-index:999;box-shadow:0 2px 8px #0003;}
+.header-wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+.logo{font-size:24px;font-weight:bold;color:var(--white);text-decoration:none;}
+nav ul{display:flex;gap:24px;list-style:none;}
+nav a{color:var(--white);text-decoration:none;font-weight:500;transition:color 0.2s;}
+nav a:hover{color:var(--accent);}
+.lang-switch{background:#224b80;border:none;color:#fff;padding:6px 8px;border-radius:4px;cursor:pointer;width:130px;}
+@media(max-width:768px){
+    .lang-switch{
+        width:100px;
+    }
+}
+/* Carousel CSS */
+.carousel{position:relative;width:100%;overflow:hidden;}
+.carousel-slide{display:flex;width:200%;transition:transform 0.8s ease;}
+.carousel-item{width:50%;padding:120px 0;background-size:cover;background-position:center;color:white;}
+.carousel-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:10px;}
+.dot{width:12px;height:12px;border-radius:50%;background:#ffffff50;cursor:pointer;}
+.dot.active{background:#fff;}
+/* Hero content */
+.carousel-item h1{font-size:42px;margin-bottom:16px;}
+.carousel-item p{font-size:18px;margin-bottom:32px;opacity:0.95;max-width:900px;}
+.btn-group{display:flex;flex-wrap:wrap;gap:16px;}
+.btn{background:var(--accent);color:#fff;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:bold;border:none;cursor:pointer;transition:0.3s;}
+.btn:hover{background:#e66c00;}
+.btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent);}
+.btn-outline:hover{background:var(--accent);color:white;}
+/* Grid */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+.card{background:var(--light);padding:24px;border-radius:8px;}
+.card h3{color:var(--primary);margin-bottom:12px;}
+/* Footer */
+footer{background:var(--primary);color:white;padding:40px 0;}
+</style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header>
-        <div class="container header-wrap">
-            <a href="#" class="logo">SATONG</a>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#solutions">Solutions</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#factory">Factory</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#resources">Resources</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <select class="lang-switch" id="langSelect">
-                <option value="/">English</option>
-                <option value="/es">Español</option>
-                <option value="/pt">Português</option>
-                <option value="/id">Bahasa Indonesia</option>
-                <option value="/ru">Русский</option>
-                <option value="/ar">العربية</option>
-            </select>
-        </div>
-    </header>
-
-    <!-- Home / Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Warehouse Racking & Automated Storage Solutions from China</h1>
-            <p>We design and manufacture reliable warehouse racking systems and automated storage solutions for factories, logistics centers, e-commerce warehouses and distribution facilities worldwide.</p>
-            <div class="btn-group">
-                <a href="#contact" class="btn">Get a Free Quote</a>
-                <a href="#contact" class="btn btn-outline">Send Your Warehouse Layout</a>
-                <a href="#contact" class="btn btn-outline">Talk to an Engineer</a>
-                <a href="#resources" class="btn btn-outline">Download Product Catalog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Advantages -->
-    <section>
-        <div class="container">
-            <h2 class="section-title">Our Advantages</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Professional Manufacturer</h3>
-                    <p>Own production workshop with full processing line for heavy duty storage racks and automation equipment.</p>
-                </div>
-                <div class="card">
-                    <h3>Custom Warehouse Solutions</h3>
-                    <p>Custom rack design according to your warehouse dimension, pallet size and load requirement.</p>
-                </div>
-                <div class="card">
-                    <h3>Fast Project Response</h3>
-                    <p>Quick quotation, drawing design and technical support for overseas warehouse projects.</p>
-                </div>
-                <div class="card">
-                    <h3>Strict Quality Control</h3>
-                    <p>Raw material inspection, production QC and loading inspection before shipment. CE & ISO9001 certified.</p>
-                </div>
-                <div class="card">
-                    <h3>Rich Export Experience</h3>
-                    <p>Export to South America, Middle East, Central Asia, Southeast Asia and Europe for many years.</p>
-                </div>
-                <div class="card">
-                    <h3>Complete Engineering Support</h3>
-                    <p>Layout design, production, packaging, loading and installation guidance service.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products">
-        <div class="container">
-            <h2 class="section-title">Our Products</h2>
-            <h3 style="color:#0f3460;margin:20px 0 10px;">Conventional Warehouse Racking</h3>
-            <ul style="margin-bottom:40px;line-height:2;">
-                <li>Selective Pallet Racking</li>
-                <li>Drive-In Pallet Racking</li>
-                <li>Very Narrow Aisle Racking</li>
-                <li>Double Deep Pallet Racking</li>
-                <li>Cantilever Racking</li>
-                <li>Mobile Racking</li>
-                <li>Mezzanine Floor</li>
-                <li>Warehouse Shelving</li>
-                <li>Boltless Shelving</li>
-                <li>Multi-Tier Racking</li>
-                <li>Die Mold Rack & Film Rack for Printing Industry (specialized product)</li>
+<header>
+    <div class="container header-wrap">
+        <a href="/" class="logo">
+            <img src="satong-logo.png" alt="SATONG warehouse racking logo" style="height:36px;">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#factory">Factory</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <h3 style="color:#0f3460;margin:20px 0 10px;">Automated Storage Systems</h3>
-            <ul style="line-height:2;">
-                <li>Automated Storage and Retrieval System (AS/RS)</li>
-                <li>AS/RS Pallet System</li>
-                <li>Mini Load AS/RS</li>
-                <li>Shuttle Racking System</li>
-                <li>Automated Stacker Crane</li>
-                <li>Conveyor System</li>
-                <li>Warehouse Management System (WMS)</li>
-                <li>Automated Warehouse Integration</li>
-            </ul>
-        </div>
-    </section>
+        </nav>
+        <select class="lang-switch" id="langSelect">
+            <option value="/">English</option>
+            <option value="/es">Español</option>
+            <option value="/pt">Português</option>
+            <option value="/id">Bahasa Indonesia</option>
+            <option value="/ru">Русский</option>
+            <option value="/ar">العربية</option>
+        </select>
+    </div>
+</header>
 
-    <!-- Solutions -->
-    <section id="solutions" style="background:#f5f7fa;">
-        <div class="container">
-            <h2 class="section-title">Solutions By Application</h2>
-            <div class="grid-3">
-                <div class="card">Manufacturing Warehouse</div>
-                <div class="card">E-commerce Fulfillment Center</div>
-                <div class="card">Cold Storage Warehouse</div>
-                <div class="card">Spare Parts Warehouse</div>
-                <div class="card">Food and Beverage Warehouse</div>
-                <div class="card">Pharmaceutical Warehouse</div>
-                <div class="card">Logistics Distribution Center</div>
-                <div class="card">Heavy-Duty Storage Solution</div>
+<section id="home">
+    <div class="carousel">
+        <div class="carousel-slide" id="slideWrap">
+            <!-- Slide1：工厂背景主页 -->
+            <div class="carousel-item" style="background:linear-gradient(rgba(15,52,96,0.85),rgba(15,52,96,0.85)),url('factory-bg.jpg');">
+                <div class="container">
+                    <h1>Warehouse Racking & Automated Storage Solutions from China</h1>
+                    <p>We design and manufacture reliable warehouse racking systems and automated storage solutions for factories, logistics centers, e-commerce warehouses and distribution facilities worldwide.</p>
+                    <div class="btn-group">
+                        <a href="#contact" class="btn">Get a Free Quote</a>
+                        <a href="https://satong.net" target="_blank" class="btn btn-outline">Send Your Warehouse Layout</a>
+                        <a href="https://satongracks.com" target="_blank" class="btn btn-outline">Talk to an Engineer</a>
+                        <a href="/catalog.pdf" download class="btn btn-outline">Download Product Catalog</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects / Case Studies -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects & Case Studies</h2>
-            <p style="text-align:center;max-width:900px;margin:0 auto 30px;">Each case includes customer country, industry, warehouse area, storage capacity, adopted products, on-site photos, solved challenges and project benefits.</p>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Overseas Warehouse Project</h3>
-                    <p>Country: Sample Country<br>Industry: Logistics<br>Products: Shuttle rack / pallet rack</p>
-                </div>
-                <div class="card">
-                    <h3>Factory Storage Project</h3>
-                    <p>Country: Sample Country<br>Industry: Manufacturing<br>Products: Mezzanine & selective rack</p>
-                </div>
-                <div class="card">
-                    <h3>Automated AS/RS Project</h3>
-                    <p>Country: Sample Country<br>Industry: Distribution<br>Products: AS/RS + conveyor system</p>
+            <!-- Slide2：广交会宣传 -->
+            <div class="carousel-item" style="background:linear-gradient(rgba(15,52,96,0.85),rgba(15,52,96,0.85)),url('cantonfair-booth.jpg');">
+                <div class="container">
+                    <h1>Join Us at 140th Canton Fair</h1>
+                    <p>Phase 1 | Hall D, Booth 18.1F31 | Oct 15 - 19, 2026<br>Welcome to visit our booth for heavy duty racking & automated warehouse solutions.</p>
+                    <div class="btn-group">
+                        <a href="#contact" class="btn">Book Meeting With Us</a>
+                        <a href="/catalog.pdf" download class="btn btn-outline">Download Catalog</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="switchSlide(0)"></span>
+            <span class="dot" onclick="switchSlide(1)"></span>
+        </div>
+    </div>
+</section>
 
-    <!-- Factory -->
-    <section id="factory" style="background:#f5f7fa;">
-        <div class="container">
-            <h2 class="section-title">Our Factory</h2>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
-                <div>
-                    <p>Factory photos & videos, production workshop, laser cutting, stamping, welding and powder coating production line.</p>
-                    <p style="margin:16px 0;">We have complete quality inspection workflow, CE, ISO9001 and High-tech Enterprise certificate. We support OEM & ODM custom manufacturing.</p>
-                    <p>Packing & container loading service for export shipment.</p>
-                </div>
-                <div>
-                    <img src="factory-photo.jpg" alt="SATONG warehouse rack factory workshop" style="width:100%;border-radius:8px;">
-                </div>
+<section id="products" style="padding:60px 0;">
+    <div class="container">
+        <h2 style="font-size:32px;color:var(--primary);margin-bottom:24px;">Our Products</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Heavy Duty Pallet Racking</h3>
+                <p>Custom heavy load pallet racking for warehouse storage.</p>
+            </div>
+            <div class="card">
+                <h3>Shuttle Racking System</h3>
+                <p>High density automated storage shuttle rack system.</p>
+            </div>
+            <div class="card">
+                <h3>Mezzanine Floor</h3>
+                <p>Steel mezzanine to double your warehouse space.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- About Us -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <p style="margin-bottom:20px;">Our group started in 2006.</p>
-            <ul style="line-height:2;">
-                <li>2006 | Tianjin Jiawei Storage Equipment Engineering Co., Ltd. founded, warehouse racking engineering & project service</li>
-                <li>2014 | Tianjin Jiawei Storage Equipment Manufacturing Co., Ltd. founded, in-house manufacturing factory</li>
-                <li>Mar 4, 2020 | Jiangsu Satong Intelligent Logistics Equipment Co., Ltd. established, dedicated to overseas export business</li>
-            </ul>
-            <p style="margin-top:20px;">Factory total area: 20,000 ㎡, production workshop:12,000 ㎡, 65 skilled employees.</p>
-            <p>Qualifications: National High-tech Enterprise (awarded in 2025), ISO9001, CE certification.</p>
-            <p>Main products: Heavy duty warehouse rack, die mold rack & film rack for printing industry, shuttle rack system, AS/RS automated warehouse, conveyor system, custom design available.</p>
-            <p>Target Markets: Argentina, Guatemala, Brazil, Indonesia, Russia, Belarus, Central Asia, Saudi Arabia & other Middle East countries, Europe, South America.</p>
-            <p>We have professional technical & engineering team, full after-sales service for overseas storage projects.</p>
-        </div>
-    </section>
+<section id="solutions" style="padding:60px 0;background:var(--light);">
+    <div class="container">
+        <h2 style="font-size:32px;color:var(--primary);margin-bottom:24px;">Solutions</h2>
+        <p>Custom warehouse layout design for manufacturing, logistics & e-commerce.</p>
+    </div>
+</section>
 
-    <!-- Resources -->
-    <section id="resources" style="background:#f5f7fa;">
-        <div class="container">
-            <h2 class="section-title">Resources & Guides</h2>
-            <ul style="line-height:2;font-size:18px;">
-                <li>Warehouse Racking Buying Guide</li>
-                <li>How to Choose Pallet Racking</li>
-                <li>AS/RS Warehouse Guide</li>
-                <li>Warehouse Layout Design</li>
-                <li>Racking Load Capacity Guide</li>
-                <li>Warehouse Automation Cost</li>
-                <li>Case Study Downloads</li>
-                <li>Product Catalog Downloads</li>
-            </ul>
-        </div>
-    </section>
+<section id="projects" style="padding:60px 0;">
+    <div class="container">
+        <h2 style="font-size:32px;color:var(--primary);margin-bottom:24px;">Projects</h2>
+        <p>Global warehouse racking project cases.</p>
+    </div>
+</section>
 
-    <!-- Contact -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
-                <div class="form-wrap">
-                    <form id="inquiryForm">
-                        <div class="form-row">
-                            <label>Name</label>
-                            <input type="text" name="name" required>
-                        </div>
-                        <div class="form-row">
-                            <label>Company</label>
-                            <input type="text" name="company">
-                        </div>
-                        <div class="form-row">
-                            <label>Email</label>
-                            <input type="email" name="email" required>
-                        </div>
-                        <div class="form-row">
-                            <label>WhatsApp</label>
-                            <input type="text" name="whatsapp">
-                        </div>
-                        <div class="form-row">
-                            <label>Country</label>
-                            <select name="country">
-                                <option value="">Select Country</option>
-                                <option>Argentina</option>
-                                <option>Brazil</option>
-                                <option>Guatemala</option>
-                                <option>Indonesia</option>
-                                <option>Russia</option>
-                                <option>Belarus</option>
-                                <option>Saudi Arabia</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="form-row">
-                            <label>Product Interest</label>
-                            <input type="text" name="product">
-                        </div>
-                        <div class="form-row">
-                            <label>Warehouse Size</label>
-                            <input type="text" name="warehouse_size">
-                        </div>
-                        <div class="form-row">
-                            <label>Required Storage Capacity</label>
-                            <input type="text" name="capacity">
-                        </div>
-                        <div class="form-row">
-                            <label>Load per Pallet</label>
-                            <input type="text" name="pallet_load">
-                        </div>
-                        <div class="form-row">
-                            <label>Number of Pallets</label>
-                            <input type="text" name="pallet_qty">
-                        </div>
-                        <div class="form-row">
-                            <label>Upload Project Drawing (CAD / PDF)</label>
-                            <input type="file" name="drawing" accept=".pdf,.cad,.dwg">
-                        </div>
-                        <div class="form-row">
-                            <label>Message</label>
-                            <textarea name="message"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Submit Inquiry</button>
-                    </form>
-                </div>
-                <div>
-                    <h3 style="color:#0f3460;margin-bottom:20px;">Contact Information</h3>
-                    <p><strong>WhatsApp:</strong> +86 13395271980</p>
-                    <p><strong>Email:</strong> hanren@satong.net</p>
-                    <p><strong>Tel:</strong> +86 516 86871980</p>
-                    <p><strong>Company:</strong> Jiangsu Satong Intelligent Logistics Equipment Co., Ltd.</p>
-                    <p><strong>Address:</strong> No. 4 Fuxing Road, Industrial Park, Tushan Town, Pizhou City, Xuzhou, Jiangsu Province, China</p>
-                    <p><strong>Website:</strong> satongrack.com / satong.net / satongracks.com</p>
-                    <p style="margin-top:20px;">LinkedIn | Google Maps embed | Online live chat widget</p>
-                </div>
+<section id="factory" style="padding:60px 0;background:var(--light);">
+    <div class="container">
+        <h2 style="font-size:32px;color:var(--primary);margin-bottom:24px;">Our Factory</h2>
+        <img src="factory-photo.jpg" alt="SATONG factory workshop" style="width:100%;border-radius:8px;">
+    </div>
+</section>
+
+<section id="about" style="padding:60px 0;">
+    <div class="container">
+        <h2 style="font-size:32px;color:var(--primary);margin-bottom:24px;">About Us</h2>
+        <p>Jiangsu Satong Intelligent Logistics Equipment Co., Ltd. is a high-tech enterprise specialized in warehouse racking and automated storage systems.</p>
+    </div>
+</section>
+
+<section id="resources" style="padding:60px 0;background:var(--light);">
+    <div class="container">
+        <h2 style="font-size:32px;color:var(--primary);margin-bottom:24px;">Resources</h2>
+        <p>Download catalog and technical documents.</p>
+    </div>
+</section>
+
+<section id="contact" style="padding:60px 0;">
+    <div class="container">
+        <h2 style="font-size:32px;color:var(--primary);margin-bottom:24px;">Contact Us</h2>
+        <form id="inquiryForm" action="/inquiry" method="POST">
+            <div style="margin-bottom:16px;">
+                <label>Name</label><br>
+                <input type="text" name="name" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;">
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-grid">
-            <div>
-                <h3>SATONG</h3>
-                <p>China Manufacturer of Warehouse Racking & Automated Warehouse Solutions</p>
+            <div style="margin-bottom:16px;">
+                <label>Email</label><br>
+                <input type="email" name="email" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;">
             </div>
-            <div>
-                <h3>Quick Links</h3>
-                <ul style="list-style:none;padding:0;">
-                    <li><a href="#about" style="color:#ddd;text-decoration:none;">About Us</a></li>
-                    <li><a href="#products" style="color:#ddd;text-decoration:none;">Products</a></li>
-                    <li><a href="#projects" style="color:#ddd;text-decoration:none;">Projects</a></li>
-                    <li><a href="#contact" style="color:#ddd;text-decoration:none;">Contact</a></li>
-                </ul>
+            <div style="margin-bottom:16px;">
+                <label>Message</label><br>
+                <textarea name="message" rows="5" style="width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;"></textarea>
             </div>
-            <div>
-                <h3>Contact</h3>
-                <p>Email: hanren@satong.net</p>
-                <p>WhatsApp: +86 13395271980</p>
-            </div>
-        </div>
-    </footer>
+            <button type="submit" class="btn">Submit Inquiry</button>
+        </form>
+    </div>
+</section>
 
-    <!-- Floating WhatsApp Button -->
-    <a class="wa-float" id="waBtn" target="_blank" href="https://wa.me/8613395271980">WA</a>
+<footer>
+    <div class="container">
+        <p>©2026 Jiangsu Satong Intelligent Logistics Equipment Co., Ltd. All rights reserved.</p>
+    </div>
+</footer>
 
-    <script>
-        // Language switcher
-        const langSelect = document.getElementById('langSelect');
-        langSelect.addEventListener('change', function(){
-            window.location.href = this.value;
-        });
-        // Dynamic WhatsApp message with current page info
-        const pageTitle = document.title;
-        const pageUrl = window.location.href;
-        const waText = encodeURIComponent(`Hello SATONG, I visit page: ${pageTitle}\nURL:${pageUrl}. I want to get quotation for warehouse racking project.`);
-        document.getElementById('waBtn').href = `https://wa.me/8613395271980?text=${waText}`;
+<script>
+// 语言切换
+const langSelect = document.getElementById('langSelect');
+langSelect.onchange = function(){
+    window.location.href = this.value;
+}
 
-        // Form submit simple handler (connect form forward to hanren@satong.net, Cloudflare Forms can capture)
-        const form = document.getElementById("inquiryForm");
-        form.addEventListener("submit",function(e){
-            e.preventDefault();
-            alert("Thank you for your inquiry! We will contact you soon.");
-            form.reset();
-        })
-    </script>
+// Carousel script
+let currentSlide = 0;
+const slideWrap = document.getElementById('slideWrap');
+const dots = document.querySelectorAll('.dot');
+function switchSlide(idx){
+    currentSlide = idx;
+    slideWrap.style.transform = `translateX(-${currentSlide * 50}%)`;
+    dots.forEach((d,i)=> d.classList.toggle('active',i===idx));
+}
+// Auto play every 5 seconds
+setInterval(()=>{
+    currentSlide = (currentSlide +1) %2;
+    switchSlide(currentSlide);
+},5000);
+</script>
 </body>
 </html>
