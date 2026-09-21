@@ -15,13 +15,28 @@ function autoSlide(){
     if(index > slides.length-1) index=0;
     showSlide(index);
 }
-// 5秒自动轮播
 setInterval(autoSlide,5000);
 
-// 点击圆点切换
+// 点击圆点切换轮播
 dots.forEach((dot,i)=>{
     dot.onclick = function(){
         index = i;
         showSlide(index);
     }
+})
+
+// FAQ 折叠展开交互
+const qaItems = document.querySelectorAll('.qa-collapse-item');
+qaItems.forEach(item => {
+    const question = item.querySelector('.qa-question');
+    question.addEventListener('click', () => {
+        // 关闭其他所有问答
+        qaItems.forEach(otherItem => {
+            if(otherItem !== item){
+                otherItem.classList.remove('active');
+            }
+        })
+        // 切换当前问答状态
+        item.classList.toggle('active');
+    })
 })
