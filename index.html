@@ -22,16 +22,26 @@ nav a:hover{color:var(--accent);}
         width:100px;
     }
 }
-/* Carousel CSS */
-.carousel{position:relative;width:100%;overflow:hidden;}
-.carousel-slide{display:flex;width:200%;transition:transform 0.8s ease;}
+/* Carousel CSS 【1920 × 720 轮播图】 */
+.carousel{
+    position:relative;
+    width:100%;
+    max-height:720px;
+    overflow:hidden;
+}
+.carousel-slide{
+    display:flex;
+    width:200%;
+    transition:transform 0.8s ease;
+}
 .carousel-item{
     width:50%;
-    padding:120px 0;
-    background-size:contain;
+    height:720px;
+    background-size:cover;
     background-position:center;
-    background-repeat:no-repeat;
     color:white;
+    display:flex;
+    align-items:center;
 }
 .carousel-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:10px;}
 .dot{width:12px;height:12px;border-radius:50%;background:#ffffff50;cursor:pointer;}
@@ -44,6 +54,16 @@ nav a:hover{color:var(--accent);}
 .btn:hover{background:#e66c00;}
 .btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent);}
 .btn-outline:hover{background:var(--accent);color:white;}
+/* 移动端：轮播高度自适应，按16:6比例缩小 */
+@media (max-width:1920px) {
+    .carousel-item{
+        height: calc(100vw * 720 / 1920);
+    }
+}
+@media (max-width:768px) {
+    .carousel-item h1{font-size:28px;}
+    .carousel-item p{font-size:16px;}
+}
 /* Grid */
 .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
 .card{background:var(--light);padding:24px;border-radius:8px;}
@@ -83,7 +103,7 @@ footer{background:var(--primary);color:white;padding:40px 0;}
 <section id="home">
     <div class="carousel">
         <div class="carousel-slide" id="slideWrap">
-            <!-- Slide1：工厂背景主页 -->
+            <!-- Slide1：工厂背景主页，图片素材1920×720 -->
             <div class="carousel-item" style="background:linear-gradient(rgba(15,52,96,0.85),rgba(15,52,96,0.85)),url('factory-bg.jpg');">
                 <div class="container">
                     <h1>Warehouse Racking & Automated Storage Solutions from China</h1>
@@ -96,7 +116,7 @@ footer{background:var(--primary);color:white;padding:40px 0;}
                     </div>
                 </div>
             </div>
-            <!-- Slide2：广交会宣传 -->
+            <!-- Slide2：广交会宣传，图片素材1920×720 -->
             <div class="carousel-item" style="background:linear-gradient(rgba(15,52,96,0.85),rgba(15,52,96,0.85)),url('cantonfair-booth.jpg');">
                 <div class="container">
                     <h1>Join Us at 140th Canton Fair</h1>
