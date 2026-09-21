@@ -1,0 +1,31 @@
+# robots.txt for SATONG official website
+# https://www.satong.com/
+
+User-agent: *
+Allow: /
+
+# Block admin and temp directories
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /*?s=
+Disallow: /*&preview=
+
+# Allow all major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.satong.com/sitemap.xml
