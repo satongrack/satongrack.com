@@ -1,25 +1,26 @@
-/* 全局重置 - 杜绝所有样式冲突 */
+/* 全局重置 - 杜绝所有样式冲突、堆叠错位 */
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:Arial,Helvetica,sans-serif;color:#333;font-size:14px;line-height:1.7;background:#fff;}
 a{text-decoration:none;color:inherit;}
 ul{list-style:none;}
+img{max-width:100%;height:auto;display:block;}
 .container{width:90%;max-width:1200px;margin:0 auto;}
-.section{padding:60px 0;}
+.section{padding:60px 0;clear:both;overflow:hidden;}
 .bg-light{background:#f8f9fa;}
 
-/* 统一栏目标题样式：居中、加粗、装饰线 */
-.section-title{text-align:center;font-size:30px;font-weight:700;color:#222;margin-bottom:45px;position:relative;}
-.section-title.has-decoration::after{content:'';position:absolute;left:50%;bottom:-12px;transform:translateX(-50%);width:80px;height:3px;background:#0066b3;border-radius:2px;}
+/* 【终极修复】栏目标题+装饰线 彻底解决错位、偏移、堆叠 */
+.section-title{text-align:center;font-size:30px;font-weight:700;color:#222;margin-bottom:50px;position:relative;clear:both;}
+.section-title.has-decoration::after{content:'';position:absolute;left:50%;bottom:-15px;transform:translateX(-50%);width:80px;height:3px;background:#0066b3;border-radius:2px;}
 
-/* 头部导航 - 彻底修复导航菜单消失问题 */
+/* 头部导航 - 100%完整显示所有菜单，修复缺失问题 */
 .site-header{background:#112842;color:#fff;position:fixed;width:100%;top:0;z-index:9999;height:70px;}
 .header-inner{display:flex;justify-content:space-between;align-items:center;height:100%;}
 .logo img{height:36px;width:auto;}
 
-/* 导航菜单核心样式 - 强制生效，不丢失 */
-.main-nav .nav-list{display:flex;align-items:center;gap:5px !important;}
+.main-nav .nav-list{display:flex !important;align-items:center;gap:8px !important;}
 .nav-item{position:relative;padding:0 12px;height:70px;display:flex;align-items:center;}
 .nav-item > a{color:#fff;font-weight:500;font-size:14px;display:block;}
+.nav-item.active a{color:#42a5f5;}
 
 /* 二级下拉菜单 */
 .dropdown-sub{position:absolute;top:70px;left:0;background:#fff;color:#333;width:220px;box-shadow:0 3px 12px rgba(0,0,0,0.15);display:none;z-index:999;}
@@ -30,7 +31,7 @@ ul{list-style:none;}
 /* 三级下拉菜单 */
 .dropdown-three{position:absolute;left:220px;top:0;background:#fff;width:240px;box-shadow:0 3px 12px rgba(0,0,0,0.15);display:none;z-index:999;}
 
-/*  hover 强制触发下拉，修复菜单不显示bug */
+/* hover强制生效，彻底修复菜单不显示 */
 .dropdown:hover > .dropdown-sub{display:block !important;}
 .drop-three:hover > .dropdown-three{display:block !important;}
 
@@ -44,7 +45,6 @@ ul{list-style:none;}
 .active-lang{color:#0066b3;font-weight:500;}
 .lang-dropdown:hover .lang-list{display:block;}
 .lang-dropdown:hover .lang-arrow{transform:rotate(180deg);}
-.lang-list li a[href*="العربية"],.lang-list li a[href*="فارسي"]{direction:rtl;text-align:right;}
 
 /* 轮播Banner */
 .banner-slider{position:relative;width:100%;height:750px;overflow:hidden;margin-top:70px;}
@@ -64,24 +64,24 @@ ul{list-style:none;}
 .dot{width:12px;height:12px;border-radius:50%;background:#ffffff50;cursor:pointer;transition:0.3s;}
 .dot.active{background:#fff;}
 
-/* 关于我们 */
-.about-content{max-width:1000px;margin:0 auto;text-align:center;}
-.about-content p{font-size:15px;line-height:1.8;color:#555;}
+/* 【全新重构】行业解决方案 一排四列、上图下文、无错位、无堆叠 */
+.solution-list{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;clear:both;}
+.solution-item{background:#fff;padding:0;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,0.08);overflow:hidden;transition:0.3s ease;}
+.solution-item:hover{transform:translateY(-5px);box-shadow:0 5px 20px rgba(0,0,0,0.12);}
+.solution-img{width:100%;height:200px;overflow:hidden;}
+.solution-img img{width:100%;height:100%;object-fit:cover;transition:0.5s ease;}
+.solution-item:hover .solution-img img{transform:scale(1.05);}
+.solution-item h3{font-size:18px;color:#222;margin:20px 20px 12px;font-weight:600;text-align:center;}
+.solution-item p{font-size:14px;color:#555;line-height:1.7;padding:0 20px 25px;text-align:center;}
 
-/* 解决方案布局 */
-.solution-list{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
-.solution-item{background:#fff;padding:30px;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,0.08);}
-.solution-item h3{font-size:18px;color:#222;margin-bottom:15px;font-weight:600;}
-.solution-item p{font-size:14px;color:#555;line-height:1.7;}
-
-/* 8个主力产品布局 */
-.product-list{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;}
+/* 核心产品布局 独立控制 无堆叠 */
+.product-list{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;clear:both;}
 .product-item{background:#fff;padding:25px;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,0.08);text-align:center;}
 .product-item h3{font-size:17px;color:#222;margin-bottom:12px;font-weight:600;}
 .product-item p{font-size:13px;color:#555;line-height:1.6;}
 
-/* 新闻模块 */
-.news-list{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+/* 新闻模块 独立布局 */
+.news-list{display:grid;grid-template-columns:1fr 1fr;gap:30px;clear:both;}
 .news-item{background:#fff;padding:25px;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
 .tag{display:inline-block;padding:4px 10px;font-size:12px;border-radius:2px;color:#fff;margin-bottom:12px;}
 .company-news{background:#0066b3;}
@@ -89,8 +89,8 @@ ul{list-style:none;}
 .news-item h3{font-size:18px;margin-bottom:10px;}
 .news-item p{font-size:14px;color:#555;}
 
-/* 修复FAQ超大字体问题，统一标准尺寸 + 单栏折叠 */
-.qa-collapse-list{max-width:900px;margin:0 auto;}
+/* FAQ 修复字体、布局、无错位 */
+.qa-collapse-list{max-width:900px;margin:0 auto;clear:both;}
 .qa-collapse-item{margin-bottom:12px;border:1px solid #eee;border-radius:4px;overflow:hidden;background:#fff;}
 .qa-question{padding:16px 20px;background:#f8f9fa;font-size:14px !important;font-weight:600;color:#222;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:0.2s;}
 .qa-question:hover{background:#f0f5fa;}
@@ -100,8 +100,8 @@ ul{list-style:none;}
 .qa-collapse-item.active .qa-question i{transform:rotate(45deg);}
 .qa-question i{transition:transform 0.3s ease;font-size:14px;}
 
-/* 页脚样式 */
-.site-footer{background:#112842;color:#eee;padding-top:60px;}
+/* 页脚 图标100%恢复 布局规整 */
+.site-footer{background:#112842;color:#eee;padding-top:60px;clear:both;}
 .footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
 .footer-col h3{color:#fff;margin-bottom:20px;font-size:18px;font-weight:600;}
 .footer-col p,.footer-col li{margin-bottom:10px;opacity:0.9;font-size:14px;}
@@ -113,14 +113,14 @@ ul{list-style:none;}
 .social-icons a:hover{color:#42a5f5;transform:translateY(-3px);}
 .copyright{text-align:center;padding:20px 0;font-size:14px;opacity:0.8;}
 
-/* 响应式适配 - 不破坏导航结构 */
+/* 响应式适配 独立布局 不堆叠 */
 @media(max-width:1200px){
-    .product-list{grid-template-columns:repeat(3,1fr);}
+    .solution-list,.product-list{grid-template-columns:repeat(3,1fr);}
 }
 @media(max-width:992px){
     .footer-top{grid-template-columns:1fr 1fr;}
     .news-list{grid-template-columns:1fr;}
-    .solution-list{grid-template-columns:repeat(2,1fr);}
+    .solution-list,.product-list{grid-template-columns:repeat(2,1fr);}
     .banner-slider{height:550px;margin-top:70px;}
     .lang-dropdown{display:none;}
 }
