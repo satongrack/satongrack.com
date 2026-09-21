@@ -1,4 +1,4 @@
-// Banner Slider
+// Banner Slider Auto Play
 let slides = document.querySelectorAll('.slide-item');
 let dots = document.querySelectorAll('.dot');
 let index = 0;
@@ -15,9 +15,10 @@ function autoSlide(){
     if(index > slides.length-1) index=0;
     showSlide(index);
 }
+// 5秒自动轮播
 setInterval(autoSlide,5000);
 
-// Dot Click
+// 点击圆点切换
 dots.forEach((dot,i)=>{
     dot.onclick = function(){
         index = i;
