@@ -1,4 +1,4 @@
-// Banner Slider Auto Play
+// 轮播自动播放
 let slides = document.querySelectorAll('.slide-item');
 let dots = document.querySelectorAll('.dot');
 let index = 0;
@@ -17,7 +17,7 @@ function autoSlide(){
 }
 setInterval(autoSlide,5000);
 
-// 点击圆点切换轮播
+// 圆点切换轮播
 dots.forEach((dot,i)=>{
     dot.onclick = function(){
         index = i;
@@ -25,18 +25,18 @@ dots.forEach((dot,i)=>{
     }
 })
 
-// FAQ 折叠展开交互
+// FAQ 折叠展开交互（单选展开，无BUG）
 const qaItems = document.querySelectorAll('.qa-collapse-item');
 qaItems.forEach(item => {
     const question = item.querySelector('.qa-question');
     question.addEventListener('click', () => {
-        // 关闭其他所有问答
+        // 关闭其他问答
         qaItems.forEach(otherItem => {
             if(otherItem !== item){
                 otherItem.classList.remove('active');
             }
         })
-        // 切换当前问答状态
+        // 切换当前
         item.classList.toggle('active');
     })
 })
