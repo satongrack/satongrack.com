@@ -31,16 +31,19 @@ ul{list-style:none;}
 .dropdown:hover > .dropdown-sub{display:block;}
 .drop-three:hover > .dropdown-three{display:block;}
 
-/* 语言切换下拉框 修复样式，无错位冲突 */
+/* 多语言下拉框样式 适配多语种排版 */
 .lang-dropdown{position:relative;margin-left:20px;height:70px;display:flex;align-items:center;cursor:pointer;user-select:none;}
 .lang-select{display:flex;align-items:center;gap:6px;color:#fff;font-size:14px;}
 .lang-arrow{font-size:12px;transition:transform 0.3s ease;}
-.lang-list{position:absolute;top:70px;right:0;background:#fff;width:100px;box-shadow:0 3px 12px rgba(0,0,0,0.15);display:none;z-index:999;border-radius:4px;overflow:hidden;}
-.lang-list li a{display:block;padding:10px 12px;color:#333;font-size:14px;transition:0.2s;}
+.lang-list{position:absolute;top:70px;right:0;background:#fff;width:140px;box-shadow:0 3px 12px rgba(0,0,0,0.15);display:none;z-index:999;border-radius:4px;overflow:hidden;}
+.lang-list li a{display:block;padding:10px 12px;color:#333;font-size:13px;transition:0.2s;text-align:left;}
 .lang-list li a:hover{background:#0066b3;color:#fff;}
 .active-lang{color:#0066b3;font-weight:500;}
 .lang-dropdown:hover .lang-list{display:block;}
 .lang-dropdown:hover .lang-arrow{transform:rotate(180deg);}
+/* 适配阿拉伯语、波斯语从右往左排版 */
+.lang-list li a[href*="العربية"],
+.lang-list li a[href*="فارسی"]{direction:rtl;text-align:right;}
 
 /* 轮播图 1920*750 精准尺寸 + 40%透明遮罩 */
 .banner-slider{position:relative;width:100%;height:750px;overflow:hidden;}
@@ -65,26 +68,28 @@ ul{list-style:none;}
 .dot{width:12px;height:12px;border-radius:50%;background:#ffffff50;cursor:pointer;transition:0.3s;}
 .dot.active{background:#fff;}
 
-/* News & Q&A */
+/* News & Q&A 优化问答字体大小 */
 .news-list,.qa-list{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
 .news-item,.qa-item{background:#fff;padding:25px;border-radius:4px;box-shadow:0 2px 8px #00000011;}
 .tag{display:inline-block;padding:4px 10px;font-size:12px;border-radius:2px;color:#fff;margin-bottom:12px;}
 .company-news{background:#0066b3;}
 .industry-insight{background:#229955;}
-.news-item h3,.qa-item h4{margin-bottom:10px;}
+.news-item h3{font-size:18px;margin-bottom:10px;}
+.qa-item h4{font-size:16px;margin-bottom:8px;}
+.qa-item p{font-size:14px;line-height:1.6;color:#555;}
 
 /* Footer */
 .site-footer{background:#112842;color:#eee;padding-top:60px;}
 .footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
 .footer-col h3{color:#fff;margin-bottom:20px;font-size:18px;}
-.footer-col p,.footer-col li{margin-bottom:10px;opacity:0.9;}
+.footer-col p,.footer-col li{margin-bottom:10px;opacity:0.9;font-size:14px;}
 .footer-col a:hover{color:#42a5f5;}
 
 .follow-us-wrap{text-align:center;padding:30px 0;border-top:#ffffff22 solid 1px;border-bottom:#ffffff22 solid 1px;margin-bottom:20px;}
 .follow-us-wrap h3{color:#fff;margin-bottom:20px;}
-.social-icons{display:flex;justify-content:center;gap:20px;}
-.social-icons a{font-size:22px;color:#eee;transition:0.3s;}
-.social-icons a:hover{color:#42a5f5;}
+.social-icons{display:flex;justify-content:center;gap:24px;}
+.social-icons a{font-size:24px;color:#eee;transition:0.3s ease;}
+.social-icons a:hover{color:#42a5f5;transform:translateY(-3px);}
 
 .copyright{text-align:center;padding:20px 0;font-size:14px;opacity:0.8;}
 
@@ -102,4 +107,6 @@ ul{list-style:none;}
     .main-nav{display:none;}
     .banner-slider{height:450px;}
     .banner-mask{padding:25px;}
+    .social-icons{gap:18px;}
+    .social-icons a{font-size:20px;}
 }
