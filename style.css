@@ -1,12 +1,15 @@
 /* Global Reset & Base */
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Arial,Helvetica,sans-serif;color:#333;font-size:15px;line-height:1.7;background:#fff;}
+body{font-family:Arial,Helvetica,sans-serif;color:#333;font-size:14px;line-height:1.7;background:#fff;}
 a{text-decoration:none;color:inherit;}
 ul{list-style:none;}
 .container{width:90%;max-width:1200px;margin:0 auto;}
 .section{padding:60px 0;}
 .bg-light{background:#f8f9fa;}
-.section-title{text-align:center;font-size:32px;margin-bottom:40px;color:#222;}
+
+/* 栏目标题样式：居中、加粗、装饰线 */
+.section-title{text-align:center;font-size:30px;font-weight:700;color:#222;margin-bottom:45px;position:relative;}
+.section-title.has-decoration::after{content:'';position:absolute;left:50%;bottom:-12px;transform:translateX(-50%);width:80px;height:3px;background:#0066b3;border-radius:2px;}
 
 /* Header */
 .site-header{background:#112842;color:#fff;position:fixed;width:100%;top:0;z-index:999;height:70px;}
@@ -17,21 +20,15 @@ ul{list-style:none;}
 .main-nav .nav-list{display:flex;gap:5px;}
 .nav-item{position:relative;padding:0 12px;height:70px;display:flex;align-items:center;}
 .nav-item > a{color:#fff;font-weight:500;}
-
-/* Second Level Menu */
 .dropdown-sub{position:absolute;top:70px;left:0;background:#fff;color:#333;width:220px;box-shadow:0 3px 12px #00000022;display:none;z-index:99;}
 .sub-item{position:relative;}
 .dropdown-sub li a{display:block;padding:12px 15px;transition:0.2s;}
 .dropdown-sub li a:hover{background:#f0f5fa;color:#0066b3;}
-
-/* Third Level Menu */
 .dropdown-three{position:absolute;left:220px;top:0;background:#fff;width:240px;box-shadow:0 3px 12px #00000022;display:none;}
-
-/* Hover Show */
 .dropdown:hover > .dropdown-sub{display:block;}
 .drop-three:hover > .dropdown-three{display:block;}
 
-/* 多语言下拉框样式 适配多语种排版 */
+/* 多语言下拉框样式 */
 .lang-dropdown{position:relative;margin-left:20px;height:70px;display:flex;align-items:center;cursor:pointer;user-select:none;}
 .lang-select{display:flex;align-items:center;gap:6px;color:#fff;font-size:14px;}
 .lang-arrow{font-size:12px;transition:transform 0.3s ease;}
@@ -41,19 +38,14 @@ ul{list-style:none;}
 .active-lang{color:#0066b3;font-weight:500;}
 .lang-dropdown:hover .lang-list{display:block;}
 .lang-dropdown:hover .lang-arrow{transform:rotate(180deg);}
-/* 适配阿拉伯语、波斯语从右往左排版 */
-.lang-list li a[href*="العربية"],
-.lang-list li a[href*="فارسی"]{direction:rtl;text-align:right;}
+.lang-list li a[href*="العربية"],.lang-list li a[href*="فارسي"]{direction:rtl;text-align:right;}
 
-/* 轮播图 1920*750 精准尺寸 + 40%透明遮罩 */
-.banner-slider{position:relative;width:100%;height:750px;overflow:hidden;}
+/* 轮播Banner */
+.banner-slider{position:relative;width:100%;height:750px;overflow:hidden;margin-top:70px;}
 .slide-item{position:absolute;width:100%;height:100%;left:0;top:0;background-size:1920px 750px;background-position:center top;background-repeat:no-repeat;opacity:0;transition:opacity 0.8s ease;}
 .slide-item.active{opacity:1;}
-
-/* 40% 黑色透明底色（文案按钮区域） */
 .banner-content{position:absolute;left:5%;top:50%;transform:translateY(-50%);max-width:700px;}
 .banner-mask{background:rgba(0,0,0,0.4);padding:40px;border-radius:6px;}
-
 .banner-content h1{font-size:42px;margin-bottom:20px;line-height:1.3;color:#fff;}
 .banner-content p{font-size:16px;margin-bottom:30px;line-height:1.8;color:#fff;}
 .banner-buttons{display:flex;gap:15px;}
@@ -62,46 +54,73 @@ ul{list-style:none;}
 .btn-outline{background:transparent;color:#fff;border:2px solid #fff;}
 .btn-primary:hover{background:#005599;}
 .btn-outline:hover{background:#ffffff22;}
-
-/* Slider Dots */
 .slide-dots{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;gap:12px;z-index:10;}
 .dot{width:12px;height:12px;border-radius:50%;background:#ffffff50;cursor:pointer;transition:0.3s;}
 .dot.active{background:#fff;}
 
-/* News & Q&A 优化问答字体大小 */
-.news-list,.qa-list{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
-.news-item,.qa-item{background:#fff;padding:25px;border-radius:4px;box-shadow:0 2px 8px #00000011;}
+/* 关于我们栏目样式 */
+.about-content{max-width:1000px;margin:0 auto;text-align:center;}
+.about-content p{font-size:15px;line-height:1.8;color:#555;}
+
+/* 解决方案栏目样式 */
+.solution-list{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+.solution-item{background:#fff;padding:30px;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,0.08);}
+.solution-item h3{font-size:18px;color:#222;margin-bottom:15px;font-weight:600;}
+.solution-item p{font-size:14px;color:#555;line-height:1.7;}
+
+/* 主力产品栏目样式（8产品网格） */
+.product-list{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;}
+.product-item{background:#fff;padding:25px;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,0.08);text-align:center;}
+.product-item h3{font-size:17px;color:#222;margin-bottom:12px;font-weight:600;}
+.product-item p{font-size:13px;color:#555;line-height:1.6;}
+
+/* 新闻栏目样式 */
+.news-list{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.news-item{background:#fff;padding:25px;border-radius:4px;box-shadow:0 2px 8px #00000011;}
 .tag{display:inline-block;padding:4px 10px;font-size:12px;border-radius:2px;color:#fff;margin-bottom:12px;}
 .company-news{background:#0066b3;}
 .industry-insight{background:#229955;}
 .news-item h3{font-size:18px;margin-bottom:10px;}
-.qa-item h4{font-size:16px;margin-bottom:8px;}
-.qa-item p{font-size:14px;line-height:1.6;color:#555;}
+.news-item p{font-size:14px;color:#555;}
 
-/* Footer */
+/* 折叠FAQ样式（单栏+标准小字体） */
+.qa-collapse-list{max-width:900px;margin:0 auto;}
+.qa-collapse-item{margin-bottom:12px;border:1px solid #eee;border-radius:4px;overflow:hidden;}
+.qa-question{padding:16px 20px;background:#f8f9fa;font-size:14px;font-weight:600;color:#222;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:0.2s;}
+.qa-question:hover{background:#f0f5fa;}
+.qa-answer{padding:0 20px;font-size:13px;line-height:1.7;color:#555;max-height:0;overflow:hidden;transition:all 0.3s ease;}
+.qa-collapse-item.active .qa-answer{padding:15px 20px;max-height:500px;}
+.qa-collapse-item.active .qa-question{background:#0066b3;color:#fff;}
+.qa-collapse-item.active .qa-question i{transform:rotate(45deg);}
+.qa-question i{transition:transform 0.3s ease;font-size:14px;}
+
+/* 页脚样式 */
 .site-footer{background:#112842;color:#eee;padding-top:60px;}
 .footer-top{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
-.footer-col h3{color:#fff;margin-bottom:20px;font-size:18px;}
+.footer-col h3{color:#fff;margin-bottom:20px;font-size:18px;font-weight:600;}
 .footer-col p,.footer-col li{margin-bottom:10px;opacity:0.9;font-size:14px;}
 .footer-col a:hover{color:#42a5f5;}
-
 .follow-us-wrap{text-align:center;padding:30px 0;border-top:#ffffff22 solid 1px;border-bottom:#ffffff22 solid 1px;margin-bottom:20px;}
 .follow-us-wrap h3{color:#fff;margin-bottom:20px;}
 .social-icons{display:flex;justify-content:center;gap:24px;}
 .social-icons a{font-size:24px;color:#eee;transition:0.3s ease;}
 .social-icons a:hover{color:#42a5f5;transform:translateY(-3px);}
-
 .copyright{text-align:center;padding:20px 0;font-size:14px;opacity:0.8;}
 
-/* 完美响应式适配，无布局错乱 */
+/* 响应式适配 */
+@media(max-width:1200px){
+    .product-list{grid-template-columns:repeat(3,1fr);}
+}
 @media(max-width:992px){
     .footer-top{grid-template-columns:1fr 1fr;}
-    .news-list,.qa-list{grid-template-columns:1fr;}
-    .banner-slider{height:550px;}
+    .news-list{grid-template-columns:1fr;}
+    .solution-list{grid-template-columns:repeat(2,1fr);}
+    .banner-slider{height:550px;margin-top:70px;}
     .lang-dropdown{display:none;}
 }
 @media(max-width:768px){
     .footer-top{grid-template-columns:1fr;}
+    .solution-list,.product-list{grid-template-columns:1fr;}
     .banner-content h1{font-size:28px;}
     .banner-buttons{flex-direction:column;}
     .main-nav{display:none;}
@@ -109,4 +128,5 @@ ul{list-style:none;}
     .banner-mask{padding:25px;}
     .social-icons{gap:18px;}
     .social-icons a{font-size:20px;}
+    .section-title{font-size:26px;}
 }
